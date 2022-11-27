@@ -1,1 +1,55 @@
-// Начните писать стили здесь
+
+@import "./blocks/main-header";
+@import "./blocks/navigation__wrapper(popover)";
+@import "./blocks/main-container.less";
+@import "./blocks/program-weight";
+@import "./blocks/advantages.less";
+
+@font-face {
+  font-family: "Lato";
+  src: url(/fonts/lato/Lato-Regular.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url(/fonts/oswald/oswaldregular.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url(/fonts/oswald/oswaldmedium.woff2) format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "Lato";
+  color: #444444;
+  background-color: #ffffff;
+  margin: 0 auto;
+  height: 100%;
+}
+
+/*Обнуление margin и padding*/
+.margin-padding_off() {
+  margin: 0;
+  padding: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

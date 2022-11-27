@@ -4,19 +4,24 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
   <title>Cat Energy</title>
 </head>
 <body class="page__body">
 <!-- header -->
   <header class="main-header">
-    <a href="#" class="logo">
-      <img class="logo__cat-image" src="img/logo.svg" width="33" height="38" alt="Картинка логотипа 'Кат Энерджи.'">
-      <img class="logo__header-image" src="img/energy_cat_logo.svg" width="128" height="24" alt="Кат Энерджи.">
-    </a>
-    <nav class="navigation">
-      <button class="navigation__toggle"> <!-- открытие/закрытие навигации -->
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
+    <div class="header__wrapper">
+      <a href="#" class="logo">
+        <img class="logo__cat-image" src="img/logo.svg" width="33" height="38" alt="Картинка логотипа 'Кат Энерджи.'">
+      </a>
+      <a href="#" class="logo">
+        <img class="logo__header-image" src="img/energy_cat_logo.svg" width="128" height="24" alt="Кат Энерджи.">
+      </a>
+      <nav class="navigation">
+        <button class="navigation__toggle"> <!-- открытие/закрытие навигации -->
+          <span class="visually-hidden">Открыть меню</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" fill="none"><path stroke="#000" stroke-width="1.5" d="M0 1.25h24M0 9.25h24M0 17.25h24"/></svg>
+        </button>
         <div class="navigation__wrapper">
           <ul class="navigation__list">
             <li class="navigation__item  navigation__item--current">
@@ -36,16 +41,19 @@
             </li>
           </ul>
         </div>
-    </nav>
+      </nav>
+    </div>
   </header>
 <!-- main-container -->
   <main class="main-container">
     <h1 class="visually-hidden">Магазин питания Cat Energy.</h1>
     <div class="main-intro--visible_background main-intro">
       <p class="main-intro__title title">Функциональное питание для котов</p>
-      <p class="main-intro__description">Занялся собой? Займись котом!</p>
+      <p class="main-intro__description description">Занялся собой? Займись котом!</p>
       <img src="img/cat_energy_main_pic.png" width="280" height="270" alt="Питание для котов с курицей.">
-      <a class="main-intro__button button" href="#">Подобрать программу</a>
+      <div class="button__wrapper">
+        <a class="main-intro__button button" href="#">Подобрать программу</a>
+      </div>
     </div>
 <!-- programm__weigh -->
     <section class="program-weight">
