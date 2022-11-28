@@ -23,7 +23,7 @@
   background-color: #ffffff;
 }
 .main-intro--visible_background {
-  background-image: url("/img/background_cat.jpg");
+  background-image: url("./img/background_cat.jpg");
   background-repeat: no-repeat;
   background-position: center -143px;
   background-size: cover;
@@ -117,7 +117,7 @@
   margin-bottom: 30px;
 }
 .program-weight__title--thin::before {
-  background-image: url("/img/weight_loss_icon.svg");
+  background-image: url("./img/weight_loss_icon.svg");
   background-repeat: no-repeat;
   left: 7px;
   z-index: 1;
@@ -144,7 +144,7 @@
   margin: auto;
 }
 .program-weight__title--muscular::before {
-  background-image: url("/img/weight_gain_icon.svg");
+  background-image: url("./img/weight_gain_icon.svg");
   background-repeat: no-repeat;
   left: -9px;
   z-index: 1;
@@ -215,7 +215,7 @@
   bottom: 0;
   left: 0;
   margin: auto;
-  background-image: url("/img/advantages_icon/leaf.svg");
+  background-image: url("./img/advantages_icon/leaf.svg");
 }
 .advantages__item--powder::before {
   content: "";
@@ -227,7 +227,7 @@
   bottom: 0;
   left: 0;
   margin: auto;
-  background-image: url("/img/advantages_icon/powder.svg");
+  background-image: url("./img/advantages_icon/powder.svg");
 }
 .advantages__item--food::before {
   content: "";
@@ -239,7 +239,7 @@
   bottom: 0;
   left: 0;
   margin: auto;
-  background-image: url("/img/advantages_icon/food.svg");
+  background-image: url("./img/advantages_icon/food.svg");
 }
 .advantages__item--time::before {
   content: "";
@@ -251,7 +251,7 @@
   bottom: 0;
   left: 0;
   margin: auto;
-  background-image: url("/img/advantages_icon/time.svg");
+  background-image: url("./img/advantages_icon/time.svg");
 }
 .living-proof__wrapper {
   background-color: #eaeaea;
@@ -431,7 +431,7 @@
   color: #222222;
 }
 .catalog__card-title--icon {
-  background-image: url("/img/catalog_more_plus.svg");
+  background-image: url("./img/catalog_more_plus.svg");
   background-repeat: no-repeat;
   background-position: center 1px;
   padding-top: 52px;
@@ -480,7 +480,7 @@
   padding: 0 60px 43px;
 }
 .gift--back-picture {
-  background-image: url("/img/gift_for_cat.jpg");
+  background-image: url("./img/gift_for_cat.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -508,7 +508,7 @@
   padding-top: 187px;
 }
 .gift__description--icon {
-  background-image: url("/img/gift_icon.svg");
+  background-image: url("./img/gift_icon.svg");
   background-repeat: no-repeat;
   background-position: center;
   top: 61px;
@@ -616,21 +616,21 @@
 /* глобальные стили*/
 @font-face {
   font-family: "Lato";
-  src: url("/fonts/lato/Lato-Regular.woff2") format("woff2");
+  src: url("./fonts/lato/Lato-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Oswald";
-  src: url("/fonts/oswald/oswaldregular.woff2") format("woff2");
+  src: url("./fonts/oswald/oswaldregular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Oswald";
-  src: url("/fonts/oswald/oswaldmedium.woff2") format("woff2");
+  src: url("./fonts/oswald/oswaldmedium.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
