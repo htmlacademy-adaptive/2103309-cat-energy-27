@@ -1,0 +1,54 @@
+.catalog__wrapper {
+  padding: 25px 20px;
+}
+
+.catalog__wrapper-cards {
+  display: grid;
+  gap: 20px;
+}
+
+.catalog__card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.catalog__card-item {
+  grid-row: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.catalog__card-list,
+.catalog__list {
+  .margin-padding_off();
+  list-style-type: none;
+}
+
+.catalog__card-list {
+  justify-self: stretch;
+}
+
+.catalog__card-item__description {
+  .margin-padding_off();
+}
+
+.catalog__card-title {
+  .margin-padding_off();
+  justify-self: start;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.catalog__card-button {
+  border: none;
+  width: 100%;
+  background-color: #68b738;
+  color: #ffffff;
+}

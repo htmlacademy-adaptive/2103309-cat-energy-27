@@ -1,0 +1,76 @@
+.additional-items {
+  padding: 25px 20px;
+}
+
+.additional-items__list {
+  .margin-padding_off();
+  list-style-type: none;
+}
+
+.additional-items__title {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  color: #000000;
+  margin: 0;
+}
+
+.additional-items__item-title {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.gift {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+  padding: 0 60px 43px;
+
+
+  &--back-picture {
+    background-image: url(/img/gift_for_cat.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 280px;
+    display: block;
+    position: relative;
+    margin: 35px 20px;
+    z-index: -1;
+    box-sizing: border-box;
+
+    &::before {
+      content: "";
+      display: block;
+      max-width: 280px;
+      width: 100%;
+      height: 100%;
+      background-color: #68b738d9;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+  }
+}
+
+.gift__description {
+  margin: 0;
+  padding-top: 187px;
+
+  &--icon {
+    background-image: url(/img/gift_icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 61px;
+    left: 0;
+    margin: auto;
+  }
+}

@@ -1,4 +1,4 @@
-
+/*импорт слитей .less*/
 @import "./blocks/main-header";
 @import "./blocks/navigation__wrapper(popover)";
 @import "./blocks/main-container.less";
@@ -6,7 +6,10 @@
 @import "./blocks/advantages.less";
 @import "./blocks/living-proof.less";
 @import "./blocks/footer.less";
+@import "./blocks/catalog.less";
+@import "./blocks/additional (catalog)";
 
+/* глобальные стили*/
 @font-face {
   font-family: "Lato";
   src: url(/fonts/lato/Lato-Regular.woff2) format("woff2");
@@ -31,15 +34,22 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
-  font-family: "Lato";
+  margin: 0 auto;
+  max-width: 710px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: #444444;
   background-color: #ffffff;
-  margin: 0 auto;
-  height: 100%;
 }
 
 /*Обнуление margin и padding*/

@@ -5,6 +5,7 @@
 .advantages__title {
   margin-bottom: 40px
 }
+
 .advantages__list {
   .margin-padding_off();
   list-style-type: none;
@@ -13,24 +14,27 @@
   gap: 20px;
 }
 
-.advantages__item--picture() {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-}
+.advantages__item {
 
-.advantages__item--leaf,
-.advantages__item--powder,
-.advantages__item--food,
-.advantages__item--time {
-  padding-left: 80px;
-  position: relative;
+  &--picture() {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  &--leaf,
+  &--powder,
+  &--food,
+  &--time {
+    padding-left: 80px;
+    position: relative;
+  }
 }
 
 .advantages__item--leaf::before {
