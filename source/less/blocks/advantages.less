@@ -1,58 +1,59 @@
 .advantages {
-  padding: 20px 20px 49px;
+  padding: 20px 20px 0;
+  margin-bottom: 49px;
 }
 
 .advantages__title {
-  margin-bottom: 40px
+  margin-bottom: 40px;
+}
+
+.advantages__item-description {
+  .margin-padding_off();
 }
 
 .advantages__list {
   .margin-padding_off();
   list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   gap: 20px;
 }
 
-.advantages__item {
+.advantages__item--picture() {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
 
-  &--picture() {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-  }
-
-  &--leaf,
-  &--powder,
-  &--food,
-  &--time {
-    padding-left: 80px;
-    position: relative;
-  }
+.advantages__item--leaf,
+.advantages__item--powder,
+.advantages__item--food,
+.advantages__item--time {
+  padding: 7px 7px 7px 80px;
+  position: relative;
 }
 
 .advantages__item--leaf::before {
   .advantages__item--picture();
-  background-image: url(/img/advantages_icon/leaf.svg);
+  background-image: url("/img/advantages_icon/leaf.svg");
 }
 
 .advantages__item--powder::before {
   .advantages__item--picture();
-  background-image: url(/img/advantages_icon/powder.svg);
+  background-image: url("/img/advantages_icon/powder.svg");
 }
 
 .advantages__item--food::before {
   .advantages__item--picture();
-  background-image: url(/img/advantages_icon/food.svg);
+  background-image: url("/img/advantages_icon/food.svg");
 }
 
 .advantages__item--time::before {
   .advantages__item--picture();
-  background-image: url(/img/advantages_icon/time.svg);
+  background-image: url("/img/advantages_icon/time.svg");
 }

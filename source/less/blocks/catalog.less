@@ -1,10 +1,23 @@
 .catalog__wrapper {
-  padding: 25px 20px;
+  padding: 0 20px;
 }
 
 .catalog__wrapper-cards {
   display: grid;
-  gap: 20px;
+  padding-top: 49px;
+  padding-bottom: 50px;
+}
+
+.catalog__item {
+  margin: 11px 0 14px;
+}
+
+.catalog__card-description {
+  .margin-padding_off();
+
+  &--more {
+    margin-bottom: 21px;
+  }
 }
 
 .catalog__card {
@@ -13,12 +26,25 @@
   grid-template-rows: 1fr 1fr;
   align-items: center;
   justify-items: center;
+  margin: 20px 0;
+
+  &--more {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    text-align: center;
+  }
 }
 
 .catalog__card-item {
   grid-row: 1 / -1;
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.catalog__list {
+  display: grid;
+  gap: 20px;
 }
 
 .catalog__card-list,
@@ -38,17 +64,29 @@
 .catalog__card-title {
   .margin-padding_off();
   justify-self: start;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   color: #222222;
+
+  &--icon {
+    background-image: url("/img/catalog_more_plus.svg");
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    padding-top: 52px;
+    margin-bottom: 8px;
+  }
 }
 
+/* думаю что эти стили к кнопкам (как и в additional) нужно сделать как модификацию, но тогда сломается
+стркутура БЭМа в html. Как лучше поступить? =) */
 .catalog__card-button {
   border: none;
   width: 100%;
-  background-color: #68b738;
   color: #ffffff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #68b738;
 }
