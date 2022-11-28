@@ -46,8 +46,10 @@
 </header>
 <!-- form-page -->
   <main class="form-page">
-    <h2 class="form-page__title title">Подбор программы</h2>
-    <p class="form-page__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+    <div class="form-page__text-wrapper">
+      <h2 class="form-page__title title">Подбор программы</h2>
+      <p class="form-page__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+    </div>
     <form class="form-page__form" action="https://echo.htmlacademy.ru" method="get">
       <div class="form-page__main-data__wrapper">
         <fieldset class="form-page__main-data">
@@ -152,8 +154,10 @@
           </ul>
         </fieldset>
       </div>
-      <button class="form-page__button button" type="submit">Отправить заявку</button>
-      <span class="footnote">* — Обязательные поля</span>
+      <div class="form-page__button__wrapper">
+        <button class="form-page__button button" type="submit">Отправить заявку</button>
+        <span class="footnote">* — Обязательные поля</span>
+      </div>
     </form>
   </main>
 <!-- footer -->
@@ -161,7 +165,7 @@
   <!-- address -->
       <section class="address--over-map address">
         <h2 class="visually-hidden">Где нас найти.</h2>
-        <div class="address__wrapper">
+        <div class="address__wrapper address__wrapper--form">
           <p class="address__title">приглашаем <br>к сотрудничеству дилеров!</p>
           <address class="address__description">ул. Большая<br>Конюшенная, д. 19/8 Санкт-Петербург</address>
         </div>
