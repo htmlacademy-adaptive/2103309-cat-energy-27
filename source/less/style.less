@@ -1,77 +1,29 @@
-/*импорт слитей .less*/
-@import "./blocks/main-header";
-@import "./blocks/navigation__wrapper(popover)";
-@import "./blocks/main-container.less";
-@import "./blocks/program-weight";
-@import "./blocks/advantages.less";
-@import "./blocks/living-proof.less";
-@import "./blocks/footer.less";
-@import "./blocks/catalog.less";
-@import "./blocks/additional (catalog)";
-@import "./blocks/form-page";
+/*стили для всех страниц*/
+@import "./blocks/fonts.less";
+@import "./blocks/footer_address.less";
+@import "./blocks/global.less";
+@import "./blocks/main-footer.less";
+@import "./blocks/main-header.less";
+@import "./blocks/navigation_wrapper(popover).less";
 
-/* глобальные стили*/
-@font-face {
-  font-family: "Lato";
-  src: url("./fonts/lato/Lato-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
+/*стили для index.html*/
+@import "./blocks/block_index/advantages.less";
+@import "./blocks/block_index/living-proof.less";
+@import "./blocks/block_index/main-container.less";
+@import "./blocks/block_index/program-weight.less";
+@import "./blocks/block_index/main-container__button.less";
 
-@font-face {
-  font-family: "Oswald";
-  src: url("./fonts/oswald/oswaldregular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
+/*стили для catalog.html*/
+@import "./blocks/block_catalog/additional.less";
+@import "./blocks/block_catalog/additional-items-button.less";
+@import "./blocks/block_catalog/catalog.less";
+@import "./blocks/block_catalog/gift.less";
 
-@font-face {
-  font-family: "Oswald";
-  src: url("./fonts/oswald/oswaldmedium.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
+/*стили для form.html*/
+@import "./blocks/block_form/additionally.less";
+@import "./blocks/block_form/button.less";
+@import "./blocks/block_form/main-data.less";
+@import "./blocks/block_form/required-options.less";
+@import "./blocks/block_form/title-text.less";
+@import "./blocks/block_form/user-data.less";
 
-html {
-  height: 100%;
-}
-
-body {
-  margin: 0 auto;
-  max-width: 710px;
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  color: #444444;
-  background-color: #ffffff;
-}
-
-.main-container,
-.catalog,
-.form-page {
-  flex-grow: 1;
-}
-
-/*Обнуление margin и padding*/
-.margin-padding_off() {
-  margin: 0;
-  padding: 0;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
