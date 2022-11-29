@@ -4,19 +4,24 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
   <title>Cat Energy</title>
 </head>
 <body class="page__body">
 <!-- header -->
   <header class="main-header">
-    <a href="#" class="logo">
-      <img class="logo__cat-image" src="img/logo.svg" width="33" height="38" alt="Картинка логотипа 'Кат Энерджи.'">
-      <img class="logo__header-image" src="img/energy_cat_logo.svg" width="128" height="24" alt="Кат Энерджи.">
-    </a>
-    <nav class="navigation">
-      <button class="navigation__toggle"> <!-- открытие/закрытие навигации -->
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
+    <div class="main-header__wrapper">
+      <a href="#" class="logo">
+        <img class="logo__cat-image" src="img/logo.svg" width="33" height="38" alt="Картинка логотипа 'Кат Энерджи.'">
+      </a>
+      <a href="#" class="logo">
+        <img class="logo__header-image" src="img/energy_cat_logo.svg" width="128" height="24" alt="Кат Энерджи.">
+      </a>
+      <nav class="navigation">
+        <button class="navigation__toggle"> <!-- открытие/закрытие навигации -->
+          <span class="visually-hidden">Открыть меню</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" fill="none"><path stroke="#000" stroke-width="1.5" d="M0 1.25h24M0 9.25h24M0 17.25h24"/></svg>
+        </button>
         <div class="navigation__wrapper">
           <ul class="navigation__list">
             <li class="navigation__item  navigation__item--current">
@@ -36,16 +41,19 @@
             </li>
           </ul>
         </div>
-    </nav>
+      </nav>
+    </div>
   </header>
 <!-- main-container -->
   <main class="main-container">
     <h1 class="visually-hidden">Магазин питания Cat Energy.</h1>
     <div class="main-intro--visible_background main-intro">
       <p class="main-intro__title title">Функциональное питание для котов</p>
-      <p class="main-intro__description">Занялся собой? Займись котом!</p>
+      <p class="main-intro__description description">Занялся собой? Займись котом!</p>
       <img src="img/cat_energy_main_pic.png" width="280" height="270" alt="Питание для котов с курицей.">
-      <a class="main-intro__button button" href="#">Подобрать программу</a>
+    </div>
+    <div class="main-container__button-wrapper">
+      <a class="main-container__button button" href="#">Подобрать программу</a>
     </div>
 <!-- programm__weigh -->
     <section class="program-weight">
@@ -78,41 +86,43 @@
       <h2 class="advantages__title title">Как это работает</h2>
       <ul class="advantages__list">
         <li class="advantages__item advantages__item--leaf advantages__item--leaf--back_element">
-          <p>Функциональное питание содержит только полезные питательные вещества.</p>
+          <p class="advantages__item-description">Функциональное питание содержит только полезные питательные вещества.</p>
         </li>
         <li class="advantages__item advantages__item--powder advantages__item--powder--back_element">
-          <p>Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
+          <p class="advantages__item-description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
         </li>
         <li class="advantages__item advantages__item--food advantages__item--food--back_element">
-          <p>Замените один-два приема обычной еды на наше функциональное питание.</p>
+          <p class="advantages__item-description">Замените один-два приема обычной еды на наше функциональное питание.</p>
         </li>
         <li class="advantages__item advantages__item--time advantages__item--time--back_element">
-          <p>Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+          <p class="advantages__item-description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
         </li>
       </ul>
     </section>
 <!-- living__proof -->
     <section class="living-proof">
-      <h2 class="living-proof__title">Живой пример</h2>
-      <p class="living-proof__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-      <dl class="living-proof__list">
-        <div class="living-proof__item">
-          <dt class="living-proof__number">5 кг</dt>
-          <dd class="living-proof__description">снижение веса</dd>
-        </div>
-        <div class="living-proof__item">
-          <dt class="living-proof__number">60 дней</dt>
-          <dd class="living-proof__description">затрачено времени</dd>
-        </div>
-      </dl>
-      <p class="living-proof__cost">Затраты на питание: 15 000 РУБ.</p>
-      <div class="slider slider--skinny-cat slider--fat-cat">
-        <div class="slider__line">
-          <div class="slider__scrubber">
-            <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 0L0 9L8 18V0Z" fill="#666666"/>
-              <path d="M24 9L16 0V18L24 9Z" fill="#666666"/>
-              </svg>
+      <div class="living-proof__wrapper">
+        <h2 class="living-proof__title title">Живой пример</h2>
+        <p class="living-proof__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+        <dl class="living-proof__list">
+          <div class="living-proof__item">
+            <dt class="living-proof__number">5 кг</dt>
+            <dd class="living-proof__number-description">снижение веса</dd>
+          </div>
+          <div class="living-proof__item">
+            <dt class="living-proof__number">60 дней</dt>
+            <dd class="living-proof__number-description">затрачено времени</dd>
+          </div>
+        </dl>
+        <p class="living-proof__cost">Затраты на питание: 15 000 РУБ.</p>
+        <div class="slider slider--skinny-cat slider--fat-cat">
+          <div class="slider__line">
+            <div class="slider__scrubber">
+              <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 0L0 9L8 18V0Z" fill="#666666"/>
+                <path d="M24 9L16 0V18L24 9Z" fill="#666666"/>
+                </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -124,15 +134,15 @@
     <section class="address--over-map address">
       <h2 class="visually-hidden">Где нас найти.</h2>
       <div class="address__wrapper">
-        <p class="address__title">приглашаемк сотрудничеству дилеров!</p>
-        <address class="address__description">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        <p class="address__title">приглашаем <br>к сотрудничеству дилеров!</p>
+        <address class="address__description">ул. Большая<br>Конюшенная, д. 19/8 Санкт-Петербург</address>
       </div>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1578.2964314925136!2d30.321519807067773!3d59.938700658637316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sth!4v1669210128465!5m2!1sru!2sth" width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1578.2964314925136!2d30.321519807067773!3d59.938700658637316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sth!4v1669210128465!5m2!1sru!2sth" width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
     <div class="main-footer__wrapper">
       <h2 class="visually-hidden">Дополнительная информация</h2>
-      <div class="logo">
-        <img class="logo__footer-image" src="img/energy_cat_logo.svg" width="128" height="24" alt="Кат Энерджи.">
+      <div class="main-footer__logo-footer">
+        <img class="main-footer__logo-footer-image" src="img/energy_cat_logo.svg" width="128" height="24" alt="Кат Энерджи.">
       </div>
       <div class="main-footer__sotial-media">
         <ul class="main-footer__sotial-media__list">
@@ -156,12 +166,16 @@
           </li>
         </ul>
       </div>
-      <a class="main-footer__htmlacademy" href="https://up.htmlacademy.ru/profession/frontender/15/adaptive/27/project/cat-energy#specification" >
-        <p class="main-footer__htmlacademy__title main-footer__htmlacademy__title--image">HTML Academy</p>
-        <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <div class="main-footer__htmlacademy">
+        <a class="main-footer__htmlacademy-link" href="https://up.htmlacademy.ru/profession/frontender/15/adaptive/27/project/cat-energy#specification" >
+          <p class="main-footer__htmlacademy__title main-footer__htmlacademy__title--image">HTML Academy</p>
+        </a>
+        <a href="main-footer__htmlacademy-link">
+          <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z" fill="#666666"/>
         </svg>
       </a>
+      </div>
     </div>
   </footer>
 </body>
