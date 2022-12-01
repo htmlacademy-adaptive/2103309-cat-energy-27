@@ -3,10 +3,25 @@
 }
 
 .main-container__button {
-  color: #ffffff;
+  color: @white;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #68b738;
+  background-color: @green;
   display: block;
   text-align: center;
+}
+
+@media (min-width: @width-tablet) {
+  .main-container__button-wrapper {
+    position: absolute;
+    width: 245px;
+    top: 137px;
+    left: 0;
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .main-container__button-wrapper {
+    top: 207px;
+  }
 }

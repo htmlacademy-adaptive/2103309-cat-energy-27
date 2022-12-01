@@ -1,15 +1,14 @@
-.additionally__wrapper {
-  padding: 22px 20px 34px;
+.form-page__additionally__wrapper {
+  padding-top: 22px;
+  margin-bottom: 34px;
 }
 
 .additionally__label {
-  font-family: "Oswald", sans-serif;
-  font-style: normal;
-  font-weight: 400;
+  .main-fonts();
+  .text-trasform();
   font-size: 16px;
   line-height: 18px;
-  text-transform: uppercase;
-  color: #444444;
+  color: @black-max_light;
 }
 
 .additionally__list {
@@ -18,26 +17,38 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
+  margin-bottom: 34px;
 }
 
 .additionally {
   .margin-padding_off();
   border: none;
-  margin-bottom: 34px;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 .additionally__title {
-  font-family: "Oswald", sans-serif;
-  font-style: normal;
-  font-weight: 400;
+  .main-fonts();
   font-size: 24px;
   line-height: 26px;
-  color: #000000;
+  color: @black;
   margin-bottom: 34px;
 }
 
 .additionally__checkbox-title {
-  color: #000000;
+  color: @black;
+}
+
+@media (min-width: @width-tablet) {
+  .additionally__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .additionally__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }

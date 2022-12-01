@@ -4,13 +4,13 @@ html {
 
 body {
   margin: 0 auto;
-  max-width: 710px;
+  max-width: 1440px;
   min-height: 100%;
   display: flex;
   flex-direction: column;
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 18px;
   color: #444444;
   background-color: #ffffff;
@@ -22,12 +22,6 @@ body {
   flex-grow: 1;
 }
 
-/*Обнуление margin и padding*/
-.margin-padding_off() {
-  margin: 0;
-  padding: 0;
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -37,4 +31,43 @@ body {
   border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.field {
+  width: 100%;
+}
+
+/*VARIABLES*/
+
+/*colors*/
+@black: #000000;
+@black-light: #222222;
+@black-max_light: #444444;
+@green: #68b738;
+@green-transparency: #68b738d9;
+@white: #ffffff;
+@grey-light: #f2f2f2;
+@cooperation-address-bg: #ffffff;
+@living-proof-bg:#eaeaea;
+@living-proof-border:#cdcdcd;
+
+/*Обнуление margin и padding*/
+.margin-padding_off() {
+  margin: 0;
+  padding: 0;
+}
+
+/*viewports*/
+@width-tablet: 768px;
+@width-desktop: 1440px;
+
+/*font*/
+.main-fonts() {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+}
+
+/*text*/
+.text-trasform() {
+  text-transform: uppercase;
 }
