@@ -60,18 +60,23 @@
   justify-self: stretch;
 }
 
+.catalog__card-item__title {
+  font-size: 12px;
+  line-height: 16px;
+}
+
 .catalog__card-item__description {
   .margin-padding_off();
+  font-size: 12px;
 }
 
 .catalog__card-title {
   .margin-padding_off();
+  .main-fonts();
+  .text-trasform();
   justify-self: start;
-  font-family: "Oswald", sans-serif;
-  font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  text-transform: uppercase;
   color: @black-light;
 
   &--icon {
@@ -95,6 +100,11 @@
 @media (min-width: @width-tablet) {
   .catalog__list {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .catalog__card-item__title,
+  .catalog__card-item__description {
+    font-size: inherit;
   }
 }
 

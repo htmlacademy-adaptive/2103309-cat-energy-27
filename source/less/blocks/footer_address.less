@@ -15,16 +15,16 @@
 
 .address__title {
   .margin-padding_off();
-  font-family: "Oswald", sans-serif;
+  .main-fonts();
+  .text-trasform();
   line-height: 20px;
-  text-transform: uppercase;
   color: @black;
   text-align: left;
 }
 
 .address__description {
-  font-style: normal;
   line-height: 20px;
+  font-style: normal;
 }
 
 .address__map {
@@ -34,7 +34,7 @@
 @media (min-width: @width-desktop) {
   .address__wrapper {
     position: absolute;
-    background-color: #ffffff;
+    background-color: @cooperation-address-bg;
     top: 95px;
     left: 110px;
     width: 565px;

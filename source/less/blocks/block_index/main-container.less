@@ -1,5 +1,5 @@
 .main-intro {
-  font-family: "Oswald", sans-serif;
+  .main-fonts();
   color: @black;
   background-color: @white;
   position: relative;
@@ -16,7 +16,7 @@
     &::before {
       content: "";
       display: block;
-      background-color: #69b738d9;
+      background-color: @green-transparency;
       position: absolute;
       width: 100%;
       height: 68%;
@@ -28,8 +28,7 @@
 }
 
 .title {
-  font-family: "Oswald", sans-serif;
-  font-weight: 400;
+  .main-fonts();
   font-size: 36px;
   line-height: 36px;
   color: @black;
@@ -56,15 +55,15 @@
 }
 
 .button {
-  font-family: "Oswald", sans-serif;
+  .main-fonts();
+  .text-trasform();
   font-size: 14px;
   line-height: 18px;
-  text-transform: uppercase;
   color: @black;
   text-decoration: none;
 
   &--last-card {
-    color: #444444;
+    color: @black-max_light;
     background-color: @grey-light;
     border: none;
     width: 100%;
@@ -102,6 +101,6 @@
   }
 
   .main-intro--visible_background::before {
-    background-color: #69b738d9;
+    background-color: @green-transparency;
   }
 }
