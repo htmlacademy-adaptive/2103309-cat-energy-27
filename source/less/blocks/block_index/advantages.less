@@ -1,9 +1,10 @@
 .advantages {
-  padding: 20px 20px 0;
+  padding: 0 20px 0;
   margin-bottom: 49px;
 }
 
 .advantages__title {
+  margin: 0;
   margin-bottom: 40px;
 }
 
@@ -34,7 +35,12 @@
 .advantages__item--powder,
 .advantages__item--food,
 .advantages__item--time {
-  padding: 7px 7px 7px 80px;
+  padding-left: 80px;
+  position: relative;
+  min-height: 60px;
+}
+
+.advantages__item--leaf--back_element {
   position: relative;
 }
 
@@ -56,4 +62,20 @@
 .advantages__item--time::before {
   .advantages__item--picture();
   background-image: url("../img/advantages_icon/time.svg");
+}
+
+.back-element() {
+  font-size: 280px;
+  font-family: "Oswald", sans-serif;
+  position: absolute;
+  color: @grey-light;
+  right: 0;
+}
+
+/*  @MEDIA  */
+@media (min-width: @width-tablet) {
+  .advantages__list {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 }

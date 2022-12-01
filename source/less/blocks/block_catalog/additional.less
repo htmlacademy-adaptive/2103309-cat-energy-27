@@ -1,10 +1,12 @@
 .additional-items {
   padding: 0 20px;
+  margin-bottom: 35px;
 }
 
 .additional-items__list {
   .margin-padding_off();
   list-style-type: none;
+  flex-grow: 1;
 }
 
 .additional-items__title {
@@ -12,8 +14,9 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
-  color: #000000;
+  color: @black;
   margin: 0;
+  margin-bottom: 49px;
 }
 
 .additional-items__item-title {
@@ -22,5 +25,16 @@
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
-  color: #222222;
+  color: @black-light;
+}
+
+@media (min-width: @width-desktop) {
+  .additional {
+    display: flex;
+  }
+
+  .additional-items {
+    max-width: 896px;
+    width: 100%;
+  }
 }

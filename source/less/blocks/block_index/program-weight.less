@@ -10,7 +10,7 @@
 
 .program-weight__card {
   padding: 30px 33px 20px 20px;
-  background-color: #f2f2f2;
+  background-color: @grey-light;
 }
 
 .program-weight__title {
@@ -19,7 +19,7 @@
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
-  color: #000000;
+  color: @black;
   .margin-padding_off();
 
   &--thin,
@@ -50,7 +50,7 @@
 }
 
 .program-weight__title--thin::after {
-  background-color: #68b738;
+  background-color: @green;
   border-radius: 50%;
   left: 0;
   .program-weight__title-general();
@@ -67,7 +67,7 @@
 }
 
 .program-weight__title--muscular::after {
-  background-color: #68b738;
+  background-color: @green;
   border-radius: 50%;
   left: 0;
   .program-weight__title-general();
@@ -79,4 +79,21 @@
   font-size: 14px;
   line-height: 18px;
   margin-bottom: 38px;
+}
+
+/*  @MEDIA  */
+@media (min-width: @width-tablet) {
+  .program-weight__card {
+    padding: 73px 62px 53px 52px;
+  }
+
+  .program-weight {
+    margin-bottom: 45px;
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .program-weight__wrapper {
+    display: flex;
+  }
 }

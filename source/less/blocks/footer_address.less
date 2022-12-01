@@ -1,11 +1,16 @@
 .address__wrapper {
   padding: 26px 20px;
   display: flex;
-  max-width: 320px;
+  justify-content: space-between;
+  gap: 7px;
 
   &--form {
-    background-color: #f2f2f2;
+    background-color: @grey-light;
   }
+}
+
+.address {
+  position: relative;
 }
 
 .address__title {
@@ -13,11 +18,27 @@
   font-family: "Oswald", sans-serif;
   line-height: 20px;
   text-transform: uppercase;
-  color: #000000;
+  color: @black;
   text-align: left;
 }
 
 .address__description {
   font-style: normal;
   line-height: 20px;
+}
+
+.address__map {
+  width: 100%;
+}
+
+@media (min-width: @width-desktop) {
+  .address__wrapper {
+    position: absolute;
+    background-color: #ffffff;
+    top: 95px;
+    left: 110px;
+    width: 565px;
+    padding: 56px 80px;
+    box-sizing: border-box;
+  }
 }

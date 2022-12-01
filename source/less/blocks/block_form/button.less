@@ -4,15 +4,32 @@
   flex-direction: column;
   align-items: center;
   gap: 21px;
-  padding: 0 20px;
   line-height: 16px;
 }
 
 .form-page__button {
   border: none;
   width: 100%;
-  color: #ffffff;
+  color: @white;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #68b738;
+  background-color: @green;
+}
+
+@media (min-width: @width-tablet) {
+  .form-page__button__wrapper {
+    flex-direction: row;
+    margin-bottom: 72px;
+  }
+
+  .form-page__button {
+    min-width: 282px;
+    width: auto;
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .form-page__button__wrapper {
+    margin-bottom: 82px;
+  }
 }

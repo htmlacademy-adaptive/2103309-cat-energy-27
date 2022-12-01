@@ -51,52 +51,54 @@
       <p class="form-page__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
     </div>
     <form class="form-page__form" action="https://echo.htmlacademy.ru" method="get">
-      <div class="form-page__main-data__wrapper">
-        <fieldset class="form-page__main-data">
-          <legend class="visually-hidden">Данные о вашем коте</legend>
-          <ul class="form-page__main-data__list">
-            <li class="form-page__main-data__item">
-              <label class="form-page__main-data__label" for="name">Имя:*</label>
-            <input class="form-page__main-data__field field" type="text" id="name" name="cat-name" placeholder="Барсик" required>
-            </li>
-            <li class="form-page__main-data__item">
-              <label class="form-page__main-data__label" for="weight">Вес(кг):*</label>
-            <input class="form-page__main-data__field field" type="text" id="weight" name="cat-weight" placeholder="7" required>
-            </li>
-            <li class="form-page__main-data__item">
-              <label class="form-page__main-data__label" for="age">Возраст(лет):*</label>
-            <input class="form-page__main-data__field field" type="text" id="age" name="cat-age" placeholder="7">
-            </li>
-          </ul>
-        </fieldset>
-      </div>
-      <div class="form-page__required-options__wrapper">
-        <fieldset class="required-options">
-          <legend class="visually-hidden">Необходимые опции веса</legend>
-          <ul class="required-options__list">
-            <li class="required-options__item">
-              <label class="required-options__label">
-                <input class="required-options__field visually-hidden" type="radio" name="weight-change">
-                <span class="required-options__radio-mark"></span>
-                <span class="required-options__radio-label">Похудение</span>
-              </label>
-            </li>
-            <li class="required-options__item">
-              <label class="required-options__label">
-                <input class="required-options__field visually-hidden" type="radio" name="weight-change">
-                <span class="required-options__radio-mark"></span>
-                <span class="required-options__radio-label">Набор массы</span>
-              </label>
-            </li>
-            <li class="required-options__item">
-              <label class="required-options__label">
-                <input class="required-options__field visually-hidden" type="radio" name="weight-change">
-                <span class="required-options__radio-mark"></span>
-                <span class="required-options__radio-label">Не знаю (нужен ваш совет)</span>
-              </label>
-            </li>
-          </ul>
-        </fieldset>
+      <div class="form-page__desktop-wrapper">
+        <div class="form-page__main-data__wrapper">
+          <fieldset class="form-page__main-data">
+            <legend class="visually-hidden">Данные о вашем коте</legend>
+            <ul class="form-page__main-data__list">
+              <li class="form-page__main-data__item">
+                <label class="form-page__main-data__label" for="name">Имя:*</label>
+              <input class="form-page__main-data__field field" type="text" id="name" name="cat-name" placeholder="Барсик" required>
+              </li>
+              <li class="form-page__main-data__item">
+                <label class="form-page__main-data__label" for="weight">Вес(кг):*</label>
+              <input class="form-page__main-data__field field" type="text" id="weight" name="cat-weight" placeholder="7" required>
+              </li>
+              <li class="form-page__main-data__item">
+                <label class="form-page__main-data__label" for="age">Возраст(лет):*</label>
+              <input class="form-page__main-data__field field" type="text" id="age" name="cat-age" placeholder="7">
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <div class="form-page__required-options__wrapper">
+          <fieldset class="required-options">
+            <legend class="visually-hidden">Необходимые опции веса</legend>
+            <ul class="required-options__list">
+              <li class="required-options__item">
+                <label class="required-options__label">
+                  <input class="required-options__field visually-hidden" type="radio" name="weight-change">
+                  <span class="required-options__radio-mark"></span>
+                  <span class="required-options__radio-label">Похудение</span>
+                </label>
+              </li>
+              <li class="required-options__item">
+                <label class="required-options__label">
+                  <input class="required-options__field visually-hidden" type="radio" name="weight-change">
+                  <span class="required-options__radio-mark"></span>
+                  <span class="required-options__radio-label">Набор массы</span>
+                </label>
+              </li>
+              <li class="required-options__item">
+                <label class="required-options__label">
+                  <input class="required-options__field visually-hidden" type="radio" name="weight-change">
+                  <span class="required-options__radio-mark"></span>
+                  <span class="required-options__radio-label">Не знаю (нужен ваш совет)</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
       </div>
       <div class="form-page__user-data__wrapper">
         <fieldset class="user-data">
@@ -110,11 +112,11 @@
               <label class="user-data__label" for="tel">Телефон:*</label>
                 <input class="user-data__field field" type="tel" id="tel" name="tel" placeholder="8 (960) 900-60-90" required>
             </li>
-            <li class="user-data__item">
-              <label class="left-element right-element user-data__label" for="comment">Комментарий</label>
-                <textarea class="user-data__field field" name="comment" id="comment" cols="30" rows="10">Расскажите обо всех повадках кота</textarea>
-            </li>
           </ul>
+        </fieldset>
+        <fieldset class="comment">
+          <legend class="left-element right-element comment__title">Комментарий</legend>
+            <textarea class="comment__field field" name="comment" id="comment" cols="30" rows="10">Расскажите обо всех повадках кота</textarea>
         </fieldset>
       </div>
       <div class="form-page__additionally__wrapper">
@@ -167,7 +169,7 @@
           <p class="address__title">приглашаем <br>к сотрудничеству дилеров!</p>
           <address class="address__description">ул. Большая<br>Конюшенная, д. 19/8 Санкт-Петербург</address>
         </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1578.2964314925136!2d30.321519807067773!3d59.938700658637316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sth!4v1669210128465!5m2!1sru!2sth" width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe class="address__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1578.2964314925136!2d30.321519807067773!3d59.938700658637316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sth!4v1669210128465!5m2!1sru!2sth" width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </section>
       <div class="main-footer__wrapper">
         <h2 class="visually-hidden">Дополнительная информация</h2>

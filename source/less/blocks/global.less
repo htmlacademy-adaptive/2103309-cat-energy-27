@@ -4,7 +4,7 @@ html {
 
 body {
   margin: 0 auto;
-  max-width: 710px;
+  max-width: 1440px;
   min-height: 100%;
   display: flex;
   flex-direction: column;
@@ -22,12 +22,6 @@ body {
   flex-grow: 1;
 }
 
-/*Обнуление margin и padding*/
-.margin-padding_off() {
-  margin: 0;
-  padding: 0;
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -38,3 +32,26 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.field {
+  width: 100%;
+}
+/*VARIABLES*/
+
+/*colors*/
+@black: #000000;
+@black-light: #222222;
+@black-max_light: #444444;
+@green: #68b738;
+@white: #ffffff;
+@grey-light: #f2f2f2;
+
+/*Обнуление margin и padding*/
+.margin-padding_off() {
+  margin: 0;
+  padding: 0;
+}
+
+/*viewports*/
+@width-tablet: 768px;
+@width-desktop: 1440px;

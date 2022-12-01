@@ -1,5 +1,5 @@
 .main-footer__wrapper {
-  background-color: #f2f2f2;
+  background-color: @grey-light;
 }
 
 .main-footer__logo-footer {
@@ -24,7 +24,7 @@
 
 .main-footer__htmlacademy__title {
   .margin-padding_off();
-  color: #444444;
+  color: @black-max_light;
   font-size: 16px;
   line-height: 19px;
 }
@@ -34,8 +34,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 23px;
 }
 
 .main-footer__htmlacademy-link {
   text-decoration: none;
+}
+
+/*  @MEDIA  */
+@media (min-width: @width-tablet) {
+  .main-footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    align-items: center;
+  }
 }
