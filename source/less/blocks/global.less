@@ -44,18 +44,38 @@ body {
 @black-light: #222222;
 @black-max_light: #444444;
 @green: #68b738;
-@green-transparency: #68b738d9;
+@green-transparency: #69b838d9;
 @white: #ffffff;
 @grey-light: #f2f2f2;
 @cooperation-address-bg: #ffffff;
 @living-proof-bg:#eaeaea;
 @living-proof-border:#cdcdcd;
+@additional-border:#cdcdcd;
+@catapog_popover_bg: #ffffff;
+@catalog_decor_line:#E6E6E6;
 
 /*Обнуление margin и padding*/
 .margin-padding_off() {
   margin: 0;
   padding: 0;
 }
+
+/*PADDING*/
+/*mobile*/
+.global-padding_mobile() {
+  padding: 0 20px;
+}
+
+/*tablet*/
+.global-padding_tablet() {
+  padding: 0 30px;
+}
+
+/*desktop*/
+.global-padding_desktop() {
+  padding: 0 110px;
+}
+
 
 /*viewports*/
 @width-tablet: 768px;
@@ -70,4 +90,30 @@ body {
 /*text*/
 .text-trasform() {
   text-transform: uppercase;
+}
+
+/*hide element*/
+.hide-element {
+  display: none;
+}
+
+/*размер заголовков */
+.fonts-size-title_width-tablet() {
+  font-size: 60px;
+  line-height: 60px;
+}
+
+.fonts-size-title_catalog-item() {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.fonts-size-additional-items__title() {
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.fonts-size-additional-items() {
+  font-size: 20px;
+  line-height: 20px;
 }

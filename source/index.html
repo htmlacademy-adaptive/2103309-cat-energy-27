@@ -22,7 +22,11 @@
           <span class="visually-hidden">Открыть меню</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" fill="none"><path stroke="#000" stroke-width="1.5" d="M0 1.25h24M0 9.25h24M0 17.25h24"/></svg>
         </button>
-        <div class="navigation__wrapper">
+        <button class="navigation__toggle hide-element"> <!-- открытие/закрытие навигации -->
+          <span class="visually-hidden">Закрыть меню</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" fill="none"><path stroke="#000" stroke-width="1.5" d="M0-.8h24.8" transform="scale(.97098 1.0282) rotate(-45 24.5 7.2)"/><path stroke="#000" stroke-width="1.5" d="M0-.8h24.8" transform="scale(.97098 1.0282) rotate(45 -1.8 2.2)"/></svg>
+        </button>
+        <div class="navigation__wrapper hide-element">
           <ul class="navigation__list">
             <li class="navigation__item  navigation__item--current">
               <a href="#">
@@ -48,7 +52,7 @@
   <main class="main-container">
     <h1 class="visually-hidden">Магазин питания Cat Energy.</h1>
     <div class="main-intro--visible_background main-intro">
-      <p class="main-intro__title title">Функциональное питание для котов</p>
+      <p class="main-intro__title title">Функциональное<br> питание для котов</p>
       <p class="main-intro__description description">Занялся собой? Займись котом!</p>
       <img src="img/cat_energy_main_pic.png" width="280" height="270" alt="Питание для котов с курицей.">
       <div class="main-container__button-wrapper">
@@ -60,7 +64,7 @@
     <section class="program-weight">
       <h2 class="visually-hidden">Программы похудения для котов.</h2>
       <div class="program-weight__wrapper">
-        <div class="program-weight__card">
+        <div class="program-weight__card thin-cat">
           <p class="program-weight__title program-weight__title--thin">Похудение</p>
           <p  class="program-weight__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
           <div class="program-weight__button__wrapper">
@@ -70,7 +74,7 @@
             </a>
           </div>
         </div>
-        <div class="program-weight__card">
+        <div class="program-weight__card fat-cat">
           <p class="program-weight__title program-weight__title--muscular">Набор массы</p>
           <p  class="program-weight__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
           <div class="program-weight__button__wrapper">
@@ -118,7 +122,22 @@
           </div>
         </dl>
         <p class="living-proof__cost">Затраты на питание: 15 000 РУБ.</p>
-        <div class="slider slider--skinny-cat slider--fat-cat">
+      </div>
+        <div class="slider">
+          <div class="slider__image slider--fat-cat">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/cat_slider/fat-cat_tablet@1x.png, /img/cat_slider/fat-cat_tablet@2x.png,">
+              <source media="(min-width: 768px)" srcset="img/cat_slider/fat-cat_tablet@1x.png, /img/cat_slider/fat-cat_tablet@2x.png">
+              <img src="img/cat_slider/fat-cat_tablet@1x.png" srcset="/img/cat_slider/fat-cat_tablet@2x.png" width="320" height="240" alt="Толстый кот">
+            </picture>
+          </div>
+          <div class="slider__image slider--skinny-cat">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/cat_slider/skinny-cat_tablet@1x.png, /img/cat_slider/skinny-cat_tablet@2x.png,">
+              <source media="(min-width: 768px)" srcset="img/cat_slider/skinny-cat_tablet@1x.png, /img/cat_slider/skinny-cat_tablet@2x.png">
+              <img src="img/cat_slider/skinny-cat_tablet@1x.png" srcset="/img/cat_slider/skinny-cat_tablet@2x.png" width="320" height="240" alt="Толстый кот">
+            </picture>
+          </div>
           <div class="slider__line">
             <div class="slider__scrubber">
               <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -128,7 +147,6 @@
             </div>
           </div>
         </div>
-      </div>
     </section>
   </main>
 <!-- footer -->

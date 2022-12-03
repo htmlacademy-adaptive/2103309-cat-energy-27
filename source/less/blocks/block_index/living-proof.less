@@ -6,6 +6,7 @@
 .living-proof__description {
   .margin-padding_off();
   margin-bottom: 20px;
+  font-size: 14px;
 }
 
 .living-proof__title {
@@ -21,11 +22,22 @@
 }
 
 .living-proof__item {
-  border: 2px solid @living-proof-border;
-  border-bottom: none;
+  max-width: 124px;
+  width: 100%;
+  position: relative;
+}
+
+.living-proof__item::after {
+  content: "";
+  width: 124px;
+  height: 52px;
+  border: 1px solid @living-proof-border;
   border-radius: 5px;
-  width: 125px;
-  padding-top: 15px;
+  border-bottom: none;
+  background-color: transparent;
+  position: absolute;
+  top: -15px;
+  left: 0;
 }
 
 .living-proof__number {
@@ -44,6 +56,17 @@
   line-height: 12px;
   text-align: center;
   margin: 0 auto;
+  position: relative;
+}
+
+.living-proof__number-description::before {
+  content: "";
+  width: 18px;
+  height: 1px;
+  background-color: @living-proof-border;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .living-proof__cost {
@@ -55,4 +78,20 @@
   color: @black;
   margin: 0;
   margin-bottom: 20px;
+}
+
+@media (min-width: @width-tablet) {
+  .living-proof__wrapper {
+    padding: 43px 30px 101px;
+  }
+
+  .living-proof__wrapper .living-proof__title {
+    .fonts-size-title_width-tablet();
+    margin-bottom: 63px;
+  }
+
+  .living-proof__description {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
