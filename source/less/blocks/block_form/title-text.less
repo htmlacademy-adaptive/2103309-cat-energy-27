@@ -1,5 +1,5 @@
 .form-page__text-wrapper {
-  padding: 0 20px;
+  .global-padding_mobile();
 }
 
 .form-page__title {
@@ -14,4 +14,10 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+}
+
+@media (min-width: @width-tablet) {
+  .form-page__text-wrapper {
+    padding: 0;
+  }
 }

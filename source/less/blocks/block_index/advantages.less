@@ -1,5 +1,5 @@
 .advantages {
-  padding: 0 20px 0;
+  .global-padding_mobile();
   margin-bottom: 49px;
 }
 
@@ -76,7 +76,10 @@
 
 @media (min-width: @width-tablet) {
   .advantages {
-    padding: 0 30px;
+    .global-padding_tablet();
+    border-bottom: 1px solid @decor_line;
+    padding-bottom: 47px;
+    margin-bottom: 43px;
   }
 
   .advantages__list {
@@ -161,7 +164,7 @@
   }
 
   .advantages {
-    padding: 0 110px;
+    .global-padding_desktop();
     margin-bottom: 69px;
   }
 }

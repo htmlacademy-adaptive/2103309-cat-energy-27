@@ -1,10 +1,20 @@
-.form-page {
-  padding: 0 20px;
+.form-page__description {
+  font-size: 14px;
 }
 
 @media (min-width: @width-tablet) {
   .form-page {
     padding: 0 70px;
+  }
+
+  .form-page__title {
+    .fonts-size-title_width-tablet();
+    margin-bottom: 54px;
+  }
+
+  .form-page__description {
+    .font-size-form-page__description();
+    max-width: 323px;
   }
 }
 

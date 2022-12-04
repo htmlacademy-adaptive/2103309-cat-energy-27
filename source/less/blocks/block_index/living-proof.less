@@ -81,6 +81,29 @@
 }
 
 @media (min-width: @width-tablet) {
+  .living-proof__info-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .living-proof__wrapper {
+    background-color: #ffffff;
+  }
+
+  .living-proof__wrapper .living-proof__title {
+    .fonts-size-title_width-tablet();
+  }
+
+  .living-proof__description {
+    margin-bottom: 65px;
+  }
+
+  .living-proof__cost {
+    .fonts-size-living-proof__cost();
+  }
+}
+
+@media (min-width: @width-desktop) {
   .living-proof__wrapper {
     padding: 43px 30px 101px;
   }
