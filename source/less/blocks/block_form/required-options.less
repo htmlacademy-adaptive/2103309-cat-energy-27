@@ -76,4 +76,26 @@
     font-size: 20px;
     line-height: 30px;
   }
+
+  .required-options__radio-mark {
+    width: 40px;
+    height: 40px;
+  }
+
+  .required-options__radio-label {
+    padding-left: 55px;
+  }
+
+  .required-options__field[type="radio"]:checked + .required-options__radio-mark::after {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .form-page__required-options__wrapper {
+    max-width: 568px;
+    width: 100%;
+    margin-bottom: 0;
+  }
 }

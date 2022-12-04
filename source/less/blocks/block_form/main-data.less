@@ -25,6 +25,11 @@
   gap: 14px;
 }
 
+.form-page__main-data__label {
+  .main-fonts();
+  text-transform: uppercase;
+}
+
 @media (min-width: @width-tablet) {
   .form-page__main-data__wrapper {
     padding: 0;
@@ -35,5 +40,18 @@
 
   .form-page__main-data__list {
     gap: 20px;
+  }
+
+  .form-page__main-data__label,
+  .form-page__main-data__field {
+    .font-size-form-page_tablet();
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .form-page__main-data__wrapper {
+    padding: 0;
+    flex-grow: 1;
+    margin-bottom: 0;
   }
 }
