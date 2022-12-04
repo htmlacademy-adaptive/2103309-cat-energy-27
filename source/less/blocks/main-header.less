@@ -1,13 +1,33 @@
+.header-index {
+  position: relative;
+}
+
+.main-header {
+  margin-bottom: 27px;
+}
+
 .main-header__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px 17px;
+  border-bottom: 1px solid @additional-border;
 }
 
 .navigation__toggle {
   border: none;
   background-color: transparent;
+}
+
+
+@media (min-width: @width-tablet) {
+  .main-header__wrapper {
+    border-bottom: none;
+  }
+
+  .header-form {
+    margin-bottom: 65px;
+  }
 }
 
 @media (min-width: @width-desktop) {

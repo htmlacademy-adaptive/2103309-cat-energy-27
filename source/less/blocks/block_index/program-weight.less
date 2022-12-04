@@ -11,6 +11,7 @@
 .program-weight__card {
   padding: 30px 33px 20px 20px;
   background-color: @grey-light;
+  position: relative;
 }
 
 .program-weight__title {
@@ -38,6 +39,8 @@
   top: 0;
   bottom: 0;
   margin: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .program-weight__title--thin::before {
@@ -83,16 +86,137 @@
 /*  @MEDIA  */
 @media (min-width: @width-tablet) {
   .program-weight__card {
-    padding: 73px 62px 53px 52px;
+    padding: 73px 268px 53px 52px;
   }
 
   .program-weight {
     margin-bottom: 45px;
+    padding: 0 30px;
+  }
+
+  .program-weight__title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .program-weight__description {
+    margin-right: 61px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .program-weight__title--thin,
+  .program-weight__title--muscular {
+    padding-left: 0;
+  }
+
+  .program-weight__title--thin::after,
+  .program-weight__title--thin::before,
+  .program-weight__title--muscular::before,
+  .program-weight__title--muscular::after {
+    content: none;
+  }
+
+  .thin-cat::before {
+    .program-weight__title-general();
+    background-image: url("../img/weight_loss_icon.svg");
+    right: 92px;
+    z-index: 1;
+    width: 140px;
+    height: 194px;
+  }
+
+  .thin-cat::after {
+    .program-weight__title-general();
+    background-color: @green;
+    border-radius: 50%;
+    right: 62px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .fat-cat::before {
+    .program-weight__title-general();
+    background-image: url("../img/weight_gain_icon.svg");
+    right: 26px;
+    z-index: 1;
+    width: 268px;
+    height: 112px;
+  }
+
+  .fat-cat::after {
+    .program-weight__title-general();
+    background-color: @green;
+    border-radius: 50%;
+    right: 62px;
+    width: 200px;
+    height: 200px;
   }
 }
 
 @media (min-width: @width-desktop) {
+  .program-weight {
+    padding: 0 110px;
+    margin-bottom: 71px;
+  }
+
   .program-weight__wrapper {
     display: flex;
+    justify-content: space-between;
+  }
+
+  .thin-cat::before,
+  .thin-cat::after,
+  .fat-cat::before,
+  .fat-cat::after {
+    content: none;
+  }
+
+  .program-weight__card {
+    max-width: 570px;
+    padding: 77px 61px 55px 52px;
+    box-sizing: border-box;
+  }
+
+  .program-weight__title--thin,
+  .program-weight__title--muscular {
+    padding-left: 162px;
+    margin-bottom: 73px;
+  }
+
+  .program-weight__title--thin::before {
+    background-image: url("../img/weight_loss_icon.svg");
+    left: 7px;
+    z-index: 1;
+    .program-weight__title-general();
+    width: 70px;
+    height: 97px;
+  }
+
+  .program-weight__title--thin::after {
+    background-color: @green;
+    border-radius: 50%;
+    left: -15px;
+    .program-weight__title-general();
+    width: 100px;
+    height: 100px;
+  }
+
+  .program-weight__title--muscular::before {
+    background-image: url("../img/weight_gain_icon.svg");
+    left: -9px;
+    z-index: 1;
+    .program-weight__title-general();
+    width: 134px;
+    height: 56px;
+  }
+
+  .program-weight__title--muscular::after {
+    background-color: @green;
+    border-radius: 50%;
+    left: 19px;
+    .program-weight__title-general();
+    width: 100px;
+    height: 100px;
   }
 }
