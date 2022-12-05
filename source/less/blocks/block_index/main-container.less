@@ -9,12 +9,24 @@
   &--visible_background {
     background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/background_cat.jpg");
     background-repeat: no-repeat;
-    background-position: center -156px;
+    background-position: center -30px;
     background-size: cover;
     position: relative;
     z-index: -1;
     padding: 27px 20px 0;
     align-items: center;
+
+    &::after {
+      content: "";
+      min-width: 322px;
+      width: 100%;
+      height: 178px;
+      position: absolute;
+      background-color: inherit;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+    }
   }
 }
 
@@ -74,6 +86,7 @@
     background-image: none;
     padding-left: 117px;
     align-items: flex-start;
+    height: auto;
   }
 
   .main-intro__title,
@@ -81,6 +94,11 @@
     color: @black;
     text-align: left;
     order: -2;
+  }
+
+  .main-intro__description {
+    font-size: 20px;
+    line-height: 20px;
   }
 
   .main-intro__title {
@@ -91,10 +109,8 @@
 @media (min-width: @width-desktop) {
   .main-intro--visible_background {
     background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/background_cat.jpg");
-    padding-top: 70px;
-  }
-
-  .main-intro--visible_background::before {
-    background-color: @green-transparency;
+    padding-top: 140px;
+    background-position: 50vw center;
+    background-size: contain;
   }
 }
