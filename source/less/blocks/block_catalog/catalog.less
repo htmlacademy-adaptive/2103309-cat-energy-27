@@ -11,6 +11,8 @@
 .catalog__item {
   padding: 19px 20px 24px;
   border-bottom: 1px solid @additional-border;
+  display: flex;
+  flex-direction: column;
 }
 
 .catalog__item:first-child {
@@ -19,6 +21,7 @@
 
 .catalog__card-description {
   .margin-padding_off();
+  height: 100%;
 
   &--more {
     margin-bottom: 21px;
@@ -180,6 +183,10 @@
     padding-top: 161px;
     position: relative;
     margin: 0;
+    flex-grow: 1;
+  }
+
+  .catalog__card:not(:last-child) {
     margin-bottom: 33px;
   }
 

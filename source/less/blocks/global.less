@@ -16,6 +16,7 @@
 @field_border_color: #E7E7E7;
 @form_decor_line: #d9d9d9;
 @footer_decor_line: #d9d9d9;
+@catalog_popover_line: #E6E6E6;
 
 html {
   height: 100%;
@@ -87,6 +88,7 @@ body {
 /*viewports*/
 @width-mobile: 320px;
 @width-tablet: 768px;
+@mobile-width-only: 767px;
 @width-desktop: 1440px;
 
 /*font*/
@@ -101,8 +103,12 @@ body {
 }
 
 /*hide element*/
-.hide-element {
+.navigation--closed {
   display: none;
+}
+
+.navigation--opened {
+  display: block;
 }
 
 /*размер заголовков */

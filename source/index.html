@@ -17,29 +17,28 @@
       <a href="#" class="logo">
         <img class="logo__header-image" src="img/energy_cat_logo.svg" width="128" height="24" alt="Кат Энерджи.">
       </a>
-      <nav class="navigation">
-        <button class="navigation__toggle"> <!-- открытие/закрытие навигации -->
-          <span class="visually-hidden">Открыть меню</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" fill="none"><path stroke="#000" stroke-width="1.5" d="M0 1.25h24M0 9.25h24M0 17.25h24"/></svg>
-        </button>
-        <button class="navigation__toggle hide-element"> <!-- открытие/закрытие навигации -->
-          <span class="visually-hidden">Закрыть меню</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" fill="none"><path stroke="#000" stroke-width="1.5" d="M0-.8h24.8" transform="scale(.97098 1.0282) rotate(-45 24.5 7.2)"/><path stroke="#000" stroke-width="1.5" d="M0-.8h24.8" transform="scale(.97098 1.0282) rotate(45 -1.8 2.2)"/></svg>
-        </button>
-        <div class="navigation__wrapper hide-element">
+      <button class="navigation__toggle"> <!-- открытие/закрытие навигации -->
+        <span class="visually-hidden">Открыть/Закрыть меню</span>
+        <svg class="navigation__popower-icon  navigation--opened" xmlns="http://www.w3.org/2000/svg" width="24" height="18" fill="none"><path stroke="#000" stroke-width="1.5" d="M0 1.25h24M0 9.25h24M0 17.25h24"/></svg>
+
+        <svg class="navigation__popower-icon navigation--closed" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"><path stroke="#000" stroke-width="1.5" d="M0-.8h24.8" transform="scale(.97098 1.0282) rotate(-45 24.5 7.2)"/><path stroke="#000" stroke-width="1.5" d="M0-.8h24.8" transform="scale(.97098 1.0282) rotate(45 -1.8 2.2)"/></svg>
+      </button>
+      <nav class="navigation navigation--closed navigation--nojs">
+
+        <div class="navigation__wrapper">
           <ul class="navigation__list">
             <li class="navigation__item  navigation__item--current">
-              <a href="#">
+              <a href="#" target="_blank">
                 Главная
               </a>
             </li>
             <li class="navigation__item">
-              <a href="#">
+              <a href="catalog.html" target="_blank">
                 Каталог продукции
               </a>
             </li>
             <li class="navigation__item">
-              <a href="#">
+              <a href="form.html" target="_blank">
                 Подбор программы
               </a>
             </li>
@@ -188,5 +187,6 @@
       </div>
     </div>
   </footer>
+<script src="./js/script.js"></script>
 </body>
 </html>
