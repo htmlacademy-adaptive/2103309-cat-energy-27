@@ -17,25 +17,28 @@
       <a href="#" class="logo">
         <img class="logo__header-image" src="img/energy_cat_logo.svg" width="128" height="24" alt="Кат Энерджи.">
       </a>
-      <nav class="navigation">
-        <button class="navigation__toggle"> <!-- открытие/закрытие навигации -->
-          <span class="visually-hidden">Открыть меню</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" fill="none"><path stroke="#000" stroke-width="1.5" d="M0 1.25h24M0 9.25h24M0 17.25h24"/></svg>
-        </button>
+      <button class="navigation__toggle"> <!-- открытие/закрытие навигации -->
+        <span class="visually-hidden">Открыть/Закрыть меню</span>
+        <svg class="navigation__popower-icon  navigation--opened" xmlns="http://www.w3.org/2000/svg" width="24" height="18" fill="none"><path stroke="#000" stroke-width="1.5" d="M0 1.25h24M0 9.25h24M0 17.25h24"/></svg>
+
+        <svg class="navigation__popower-icon navigation--closed" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"><path stroke="#000" stroke-width="1.5" d="M0-.8h24.8" transform="scale(.97098 1.0282) rotate(-45 24.5 7.2)"/><path stroke="#000" stroke-width="1.5" d="M0-.8h24.8" transform="scale(.97098 1.0282) rotate(45 -1.8 2.2)"/></svg>
+      </button>
+      <nav class="navigation navigation--closed navigation--nojs">
+
         <div class="navigation__wrapper">
           <ul class="navigation__list">
             <li class="navigation__item  navigation__item--current">
-              <a href="#">
+              <a href="#" target="_blank">
                 Главная
               </a>
             </li>
             <li class="navigation__item">
-              <a href="#">
+              <a href="catalog.html" target="_blank">
                 Каталог продукции
               </a>
             </li>
             <li class="navigation__item">
-              <a href="#">
+              <a href="form.html" target="_blank">
                 Подбор программы
               </a>
             </li>
@@ -48,7 +51,7 @@
   <main class="main-container">
     <h1 class="visually-hidden">Магазин питания Cat Energy.</h1>
     <div class="main-intro--visible_background main-intro">
-      <p class="main-intro__title title">Функциональное питание для котов</p>
+      <p class="main-intro__title title">Функциональное<br> питание для котов</p>
       <p class="main-intro__description description">Занялся собой? Займись котом!</p>
       <img src="img/cat_energy_main_pic.png" width="280" height="270" alt="Питание для котов с курицей.">
       <div class="main-container__button-wrapper">
@@ -60,7 +63,7 @@
     <section class="program-weight">
       <h2 class="visually-hidden">Программы похудения для котов.</h2>
       <div class="program-weight__wrapper">
-        <div class="program-weight__card">
+        <div class="program-weight__card thin-cat">
           <p class="program-weight__title program-weight__title--thin">Похудение</p>
           <p  class="program-weight__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
           <div class="program-weight__button__wrapper">
@@ -70,7 +73,7 @@
             </a>
           </div>
         </div>
-        <div class="program-weight__card">
+        <div class="program-weight__card fat-cat">
           <p class="program-weight__title program-weight__title--muscular">Набор массы</p>
           <p  class="program-weight__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
           <div class="program-weight__button__wrapper">
@@ -107,18 +110,21 @@
       <div class="living-proof__wrapper">
         <h2 class="living-proof__title title">Живой пример</h2>
         <p class="living-proof__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-        <dl class="living-proof__list">
-          <div class="living-proof__item">
-            <dt class="living-proof__number">5 кг</dt>
-            <dd class="living-proof__number-description">снижение веса</dd>
-          </div>
-          <div class="living-proof__item">
-            <dt class="living-proof__number">60 дней</dt>
-            <dd class="living-proof__number-description">затрачено времени</dd>
-          </div>
-        </dl>
-        <p class="living-proof__cost">Затраты на питание: 15 000 РУБ.</p>
-        <div class="slider slider--skinny-cat slider--fat-cat">
+        <div class="living-proof__info-wrapper">
+          <dl class="living-proof__list">
+            <div class="living-proof__item--border living-proof__item">
+              <dt class="living-proof__number">5 кг</dt>
+              <dd class="living-proof__number-description">снижение веса</dd>
+            </div>
+            <div class="living-proof__item--border living-proof__item">
+              <dt class="living-proof__number">60 дней</dt>
+              <dd class="living-proof__number-description">затрачено времени</dd>
+            </div>
+          </dl>
+          <p class="living-proof__cost">Затраты на питание: 15 000 РУБ.</p>
+        </div>
+      </div>
+        <div class="slider">
           <div class="slider__line">
             <div class="slider__scrubber">
               <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -128,7 +134,6 @@
             </div>
           </div>
         </div>
-      </div>
     </section>
   </main>
 <!-- footer -->
@@ -138,7 +143,8 @@
       <h2 class="visually-hidden">Где нас найти.</h2>
       <div class="address__wrapper">
         <p class="address__title">приглашаем <br>к сотрудничеству дилеров!</p>
-        <address class="address__description">ул. Большая<br>Конюшенная, д. 19/8 Санкт-Петербург</address>
+        <address class="address__description">ул. Большая<br>Конюшенная, д. 19/8 Санкт-Петербург
+        </address>
       </div>
       <iframe class="address__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1578.2964314925136!2d30.321519807067773!3d59.938700658637316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sth!4v1669210128465!5m2!1sru!2sth" width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
@@ -181,5 +187,6 @@
       </div>
     </div>
   </footer>
+<script src="./js/script.js"></script>
 </body>
 </html>

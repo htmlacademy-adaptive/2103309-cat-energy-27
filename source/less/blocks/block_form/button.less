@@ -1,4 +1,5 @@
 .form-page__button__wrapper {
+  .global-padding_mobile();
   margin-bottom: 32px;
   display: flex;
   flex-direction: column;
@@ -20,6 +21,8 @@
   .form-page__button__wrapper {
     flex-direction: row;
     margin-bottom: 72px;
+    padding: 0;
+    column-gap: 64px;
   }
 
   .form-page__button {
@@ -31,5 +34,10 @@
 @media (min-width: @width-desktop) {
   .form-page__button__wrapper {
     margin-bottom: 82px;
+    column-gap: 84px;
+  }
+
+  .form-page__button {
+    min-width: 568px;
   }
 }

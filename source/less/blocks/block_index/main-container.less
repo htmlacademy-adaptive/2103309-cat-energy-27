@@ -3,24 +3,27 @@
   color: @black;
   background-color: @white;
   position: relative;
+  display: flex;
+  flex-direction: column;
 
   &--visible_background {
-    background-image: url("../img/background_cat.jpg");
+    background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/background_cat.jpg");
     background-repeat: no-repeat;
-    background-position: center -156px;
+    background-position: center -30px;
     background-size: cover;
     position: relative;
     z-index: -1;
     padding: 27px 20px 0;
+    align-items: center;
 
-    &::before {
+    &::after {
       content: "";
-      display: block;
-      background-color: @green-transparency;
-      position: absolute;
+      min-width: 322px;
       width: 100%;
-      height: 68%;
-      top: 0;
+      height: 178px;
+      position: absolute;
+      background-color: inherit;
+      bottom: 0;
       left: 0;
       z-index: -1;
     }
@@ -81,26 +84,33 @@
 @media (min-width: @width-tablet) {
   .main-intro--visible_background {
     background-image: none;
-  }
-
-  .main-intro--visible_background::before {
-    background-color: transparent;
+    padding-left: 117px;
+    align-items: flex-start;
+    height: auto;
   }
 
   .main-intro__title,
   .main-intro__description {
     color: @black;
     text-align: left;
+    order: -2;
+  }
+
+  .main-intro__description {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .main-intro__title {
+    .fonts-size-title_width-tablet();
   }
 }
 
 @media (min-width: @width-desktop) {
   .main-intro--visible_background {
-    background-image: url("../img/background_cat.jpg");
-    padding-top: 70px;
-  }
-
-  .main-intro--visible_background::before {
-    background-color: @green-transparency;
+    background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/background_cat.jpg");
+    padding-top: 140px;
+    background-position: 50vw center;
+    background-size: contain;
   }
 }

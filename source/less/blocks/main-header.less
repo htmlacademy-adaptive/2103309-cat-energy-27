@@ -1,3 +1,7 @@
+.header-index {
+  position: relative;
+}
+
 .main-header__wrapper {
   display: flex;
   justify-content: space-between;
@@ -5,12 +9,24 @@
   padding: 10px 20px 17px;
 }
 
-.navigation__toggle {
-  border: none;
-  background-color: transparent;
+@media (min-width: @width-tablet) {
+  .main-header__wrapper {
+    border-bottom: none;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .header-form {
+    margin-bottom: 65px;
+  }
 }
 
 @media (min-width: @width-desktop) {
+  .main-header__wrapper {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+
   .header-index {
     position: absolute;
     left: 0;
