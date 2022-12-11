@@ -12,15 +12,32 @@
   text-align: center;
 }
 
+@media (max-width: @mobile-width-only) {
+  .not-mobile {
+    display: none;
+  }
+}
+
 @media (min-width: @width-tablet) {
   .main-container__button-wrapper {
+    .padding-main-title_tablet();
     width: 245px;
     order: -1;
+    z-index: 0;
+  }
+
+  .not-mobile {
+    display: block;
+  }
+
+  .mobile-only {
+    display: none;
   }
 }
 
 @media (min-width: @width-desktop) {
   .main-container__button-wrapper {
     top: 207px;
+    grid-column: 1 / 2;
   }
 }

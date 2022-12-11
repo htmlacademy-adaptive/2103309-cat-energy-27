@@ -5,18 +5,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico"> <!-- 32*32 -->
+  <link rel="icon" href="img/Favicon/16.png" type="image/x-icon"> <!--  16*16 -->
+  <link rel="icon" href="img/Favicon/152.png" type="image/x-icon"> <!-- 152*152 -->
   <title>Cat Energy</title>
 </head>
 <body class="page__body">
 <!-- header -->
   <header class="main-header header-index">
     <div class="main-header__wrapper">
-      <a href="#" class="logo">
-        <img class="logo__cat-image" src="img/logo.svg" width="33" height="38" alt="Картинка логотипа 'Кат Энерджи.'">
-      </a>
-      <a href="#" class="logo">
-        <img class="logo__header-image" src="img/energy_cat_logo.svg" width="128" height="24" alt="Кат Энерджи.">
-      </a>
+      <picture>
+        <source media="(min-width:1440px)" srcset="img/logo/cat_energy_logo_desktop.svg" width="202" height="59">
+        <source media="(min-width:768px)" srcset="img/logo/cat_energy_logo_tablet.svg" width="174" height="52">
+          <img class="logo__cat-image" src="img/logo/cat_energy_logo_mobile.svg" width="33" height="38" alt="Картинка логотипа 'Кат Энерджи.'">
+      </picture>
+      <img class="logo__header-image" src="img/logo/cat_energy_logo_text.svg" width="128" height="24" alt="Кат Энерджи.">
       <button class="navigation__toggle"> <!-- открытие/закрытие навигации -->
         <span class="visually-hidden">Открыть/Закрыть меню</span>
         <svg class="navigation__popower-icon  navigation--opened" xmlns="http://www.w3.org/2000/svg" width="24" height="18" fill="none"><path stroke="#000" stroke-width="1.5" d="M0 1.25h24M0 9.25h24M0 17.25h24"/></svg>
@@ -51,14 +54,24 @@
   <main class="main-container">
     <h1 class="visually-hidden">Магазин питания Cat Energy.</h1>
     <div class="main-intro--visible_background main-intro">
-      <p class="main-intro__title title">Функциональное<br> питание для котов</p>
-      <p class="main-intro__description description">Занялся собой? Займись котом!</p>
-      <img src="img/cat_energy_main_pic.png" width="280" height="270" alt="Питание для котов с курицей.">
-      <div class="main-container__button-wrapper">
+      <div class="main-intro__main-text">
+        <p class="main-intro__title title">Функциональное<br> питание&nbsp;для&nbsp;котов</p>
+        <p class="main-intro__description description">Занялся собой? Займись котом!</p>
+        <div class="main-container__button-wrapper not-mobile">
+          <a class="main-container__button button" href="#">Подобрать программу</a>
+        </div>
+      </div>
+      <div class="main-intro__picture">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/main_picture/index-can-desktop@1x.png 1x, img/main_picture/index-can-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/main_picture/index-can-tablet@1x.jpg 1x, img/main_picture/index-can-tablet@2x.jpg 2x">
+          <img src="img/main_picture/index-can-mobile@1x.png" srcset="img/main_picture/index-can-mobile@2x.png 2x" alt="Банка корма для котов с курицей.">
+        </picture>
+      </div>
+      <div class="main-container__button-wrapper mobile-only">
         <a class="main-container__button button" href="#">Подобрать программу</a>
       </div>
     </div>
-
 <!-- programm__weigh -->
     <section class="program-weight">
       <h2 class="visually-hidden">Программы похудения для котов.</h2>
@@ -125,6 +138,20 @@
         </div>
       </div>
         <div class="slider">
+          <div class="slider__image slider__image-before">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/cat_slider/before_desktop@1x.png 1x, img/cat_slider/before_desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/cat_slider/before_tablet@1x.png 1x, img/cat_slider/before_tablet@2x.png 2x">
+              <img src="img/cat_slider/before_mobile@1x.png" srcset="img/cat_slider/before_mobile@2x.png 2x" alt="Толстый кот.">
+            </picture>
+          </div>
+          <div class="slider__image slider__image-after">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/cat_slider/after_desktop@1x.png 1x, img/cat_slider/after_desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/cat_slider/after_tablet@1x.png 1x, img/cat_slider/after_tablet@2x.png 2x">
+              <img src="img/cat_slider/after_mobile@1x.png" srcset="img/cat_slider/after_mobile@2x.png 2x" alt="Худой кот.">
+            </picture>
+          </div>
           <div class="slider__line">
             <div class="slider__scrubber">
               <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -151,7 +178,7 @@
     <div class="main-footer__wrapper">
       <h2 class="visually-hidden">Дополнительная информация</h2>
       <div class="main-footer__logo-footer">
-        <img class="main-footer__logo-footer-image" src="img/energy_cat_logo.svg" width="128" height="24" alt="Кат Энерджи.">
+        <img class="main-footer__logo-footer-image" src="img/logo/cat_energy_logo_text.svg" width="128" height="24" alt="Кат Энерджи.">
       </div>
       <div class="main-footer__sotial-media">
         <ul class="main-footer__sotial-media__list">
