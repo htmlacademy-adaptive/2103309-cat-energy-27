@@ -93,6 +93,11 @@ body {
   color: #444444;
   background-color: #ffffff;
 }
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 .main-container,
 .catalog,
 .form-page {
@@ -144,6 +149,9 @@ body {
   padding-top: 39px;
   padding-bottom: 32px;
   border-bottom: 1px solid #d9d9d9;
+}
+.main-footer__logo-footer-image {
+  width: 128px;
 }
 .main-footer__sotial-media {
   padding-top: 23px;
@@ -204,6 +212,9 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px 17px;
+}
+.logo__header-image {
+  width: 128px;
 }
 @media (min-width: 768px) {
   .main-header__wrapper {
@@ -721,12 +732,15 @@ body {
     padding-left: 117px;
     color: #000000;
     text-align: left;
-    order: -2;
+  }
+  .main-intro__main-text {
+    order: -1;
   }
   .main-intro__picture {
     position: relative;
     top: -83px;
     z-index: -1;
+    order: 1;
   }
   .main-intro__title {
     font-size: 60px;
@@ -746,14 +760,14 @@ body {
 @media (min-width: 1440px) {
   .main-intro {
     display: grid;
-    grid-template-columns: 415px min-content;
+    grid-template-columns: 415px 552px;
     grid-template-rows: repeat(3, min-content);
   }
   .main-intro--visible_background {
-    background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/background_green_cat/background_cat@1x.jpg");
+    background-image: linear-gradient(to right, #ffffff 50%, transparent 50%), linear-gradient(to right, #ffffff 50%, #69b838d9 50%), url("../img/background_green_cat/background_cat@1x.jpg");
     padding-top: 140px;
-    background-position: 50vw center;
-    background-size: cover;
+    background-position: 150% 0%;
+    background-size: contain;
   }
   .main-intro--visible_background::after {
     display: none;
@@ -768,6 +782,11 @@ body {
     grid-column: 2 / 3;
     grid-row: 1 / -1;
     position: static;
+  }
+}
+@media (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1440px) and (min-resolution: 2dppx) {
+  .main-intro--visible_background {
+    background-image: linear-gradient(to right, #ffffff 50%, transparent 50%), linear-gradient(to right, #ffffff 50%, #69b838d9 50%), url("../img/background_green_cat/background_cat@2x.jpg");
   }
 }
 .program-weight {
@@ -1062,10 +1081,6 @@ body {
     height: 100px;
   }
 }
-.main-container__button-wrapper {
-  margin-bottom: 20px;
-  width: 100%;
-}
 .main-container__button {
   color: #ffffff;
   padding-top: 10px;
@@ -1073,6 +1088,8 @@ body {
   background-color: #68b738;
   display: block;
   text-align: center;
+  margin-bottom: 20px;
+  width: 100%;
 }
 @media (max-width: 767px) {
   .not-mobile {
@@ -1080,11 +1097,11 @@ body {
   }
 }
 @media (min-width: 768px) {
-  .main-container__button-wrapper {
-    padding-left: 117px;
-    width: 245px;
+  .main-container__button {
+    padding: 14px 26px;
+    width: auto;
     order: -1;
-    z-index: 0;
+    margin-left: 117px;
   }
   .not-mobile {
     display: block;
@@ -1450,7 +1467,7 @@ body {
   box-sizing: border-box;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-  .gift {
+  .gift--back-picture {
     background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("/img/gift_for_cat@2x.jpg");
   }
 }
