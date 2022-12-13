@@ -5,23 +5,29 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+  <link rel="icon" href="img/favicon/32.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
   <title>Cat Energy</title>
 </head>
 <body class="page__body">
 <!-- header -->
-<header class="main-header header-index">
+<header class="main-header header-form">
   <div class="main-header__wrapper">
-    <a href="#" class="logo">
-      <img class="logo__cat-image" src="img/logo.svg" width="33" height="38" alt="Картинка логотипа 'Кат Энерджи.'">
-    </a>
-    <a href="#" class="logo">
-      <img class="logo__header-image" src="img/energy_cat_logo.svg" width="128" height="24" alt="Кат Энерджи.">
-    </a>
+    <picture>
+      <source media="(min-width:1440px)" srcset="img/logo/cat_energy_logo_desktop.svg" width="202" height="59">
+      <source media="(min-width:768px)" srcset="img/logo/cat_energy_logo_tablet.svg" width="174" height="52">
+        <img class="logo__cat-image" src="img/logo/cat_energy_logo_mobile.svg" width="33" height="38" alt="Картинка логотипа 'Кат Энерджи.'">
+    </picture>
+    <img class="logo__header-image" src="img/logo/cat_energy_logo_text.svg" width="128" height="24" alt="Кат Энерджи.">
     <button class="navigation__toggle"> <!-- открытие/закрытие навигации -->
-      <span class="visually-hidden">Открыть меню</span>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" fill="none"><path stroke="#000" stroke-width="1.5" d="M0 1.25h24M0 9.25h24M0 17.25h24"/></svg>
+      <span class="visually-hidden">Открыть/Закрыть меню</span>
+      <svg class="navigation__popower-icon  navigation--opened" xmlns="http://www.w3.org/2000/svg" width="24" height="18" fill="none"><path stroke="#000" stroke-width="1.5" d="M0 1.25h24M0 9.25h24M0 17.25h24"/></svg>
+
+      <svg class="navigation__popower-icon navigation--closed" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"><path stroke="#000" stroke-width="1.5" d="M0-.8h24.8" transform="scale(.97098 1.0282) rotate(-45 24.5 7.2)"/><path stroke="#000" stroke-width="1.5" d="M0-.8h24.8" transform="scale(.97098 1.0282) rotate(45 -1.8 2.2)"/></svg>
     </button>
-    <nav class="navigation navigation--nojs">
+    <nav class="navigation navigation--closed navigation--nojs">
 
       <div class="navigation__wrapper">
         <ul class="navigation__list">
@@ -175,7 +181,7 @@
       <div class="main-footer__wrapper">
         <h2 class="visually-hidden">Дополнительная информация</h2>
         <div class="main-footer__logo-footer">
-          <img class="main-footer__logo-footer-image" src="img/energy_cat_logo.svg" width="128" height="24" alt="Кат Энерджи.">
+          <img class="main-footer__logo-footer-image" src="img/logo/cat_energy_logo_text.svg" width="128" height="24" alt="Кат Энерджи.">
         </div>
         <div class="main-footer__sotial-media">
           <ul class="main-footer__sotial-media__list">
