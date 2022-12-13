@@ -94,19 +94,22 @@
     align-items: flex-start;
   }
 
-
   .main-intro__title,
   .main-intro__description {
     .padding-main-title_tablet();
     color: @black;
     text-align: left;
-    order: -2;
+  }
+
+  .main-intro__main-text {
+    order: -1;
   }
 
   .main-intro__picture {
     position: relative;
     top: -83px;
     z-index: -1;
+    order: 1;
   }
 
   .main-intro__title {
@@ -136,7 +139,11 @@
     background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/background_green_cat/background_cat@1x.jpg");
     padding-top: 140px;
     background-position: 50vw center;
-    background-size: cover;
+    background-size: contain;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/background_green_cat/background_cat@2x.jpg");
+    }
   }
 
   .main-intro--visible_background::after {
