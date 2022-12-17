@@ -11,7 +11,18 @@
 
 .user-data__field {
   padding-left: 15px;
+  position: relative;
 }
+
+.user-data__field:focus {
+  outline: 2px solid @black-max_light;
+}
+
+/*поведение элемента поля при ошибке
+.user-data__field:invalid {
+  outline: 2px solid @error_status;
+}
+*/
 
 .user-data__list {
   .margin-padding_off();
@@ -26,31 +37,29 @@
   column-gap: 10px;
   position: relative;
   align-items: center;
-
-  .user-data_field-icon() {
-    content: "";
-    position: absolute;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 20px;
-    height: 20px;
-    right: 15px;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-  }
-
-  &--email-icon::after {
-    .user-data_field-icon();
-    background-image: url("../img/email_icon.svg");
-  }
-
-  &--tel-icon::after {
-    .user-data_field-icon();
-    background-image: url("../img/tel_icon.svg");
-  }
 }
+
+.user-data__item--email-icon,
+.user-data__item--tel-icon {
+  stroke: #000000;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  bottom: 0;
+  margin: auto;
+}
+
+.user-data__field:focus + .user-data__item--email-icon,
+.user-data__field:focus + .user-data__item--tel-icon {
+  stroke: @green;
+}
+
+/* поведение элемента  иконка при ошибке
+.user-data__field:invalid + .user-data__item--email-icon,
+.user-data__field:invalid + .user-data__item--tel-icon {
+  stroke: @error_status;
+}
+*/
 
 .user-data {
   .margin-padding_off();
