@@ -80,7 +80,7 @@ const sprite = () => {
   return gulp.src('source/img/logo/*.svg')
     .pipe(svgo())
     .pipe(svgstore({
-    inlineSvg: true
+      inlineSvg: true
   }))
     .pipe(rename('sprite.svg'))
     .pipe(gulp.dest('build/img'))
@@ -110,7 +110,7 @@ const clean = () => {
 const reload = (done) => {
   browser.reload();
   done();
-  }
+}
 
 // Server
 
@@ -147,8 +147,7 @@ export const build = gulp.series(
     svg,
     sprite,
     webpImages
-    )
-);
+));
 
 //Default
 
@@ -167,4 +166,4 @@ export default gulp.series(
     gulp.series(
       server,
       watcher
-    ));
+));
