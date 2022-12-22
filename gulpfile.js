@@ -32,40 +32,40 @@ export const styles = () => {
 
 const html = () => {
   return gulp.src('source/*.html')
-  .pipe(htmlmin({ collapseWhitespace: true }))
-  .pipe(gulp.dest('build'));
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('build'));
 }
 
 // Scripts
 
 const script = () => {
   return gulp.src('source/js/*.js')
-  .pipe(terser())
-  .pipe(gulp.dest('build/js'))
+    .pipe(terser())
+    .pipe(gulp.dest('build/js'))
 }
 
 // Images
 
 const optimizeImages = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
-  .pipe(squoosh())
-  .pipe(gulp.dest('build/img'))
+    .pipe(squoosh())
+    .pipe(gulp.dest('build/img'))
 }
 
 const images = () => {
   return gulp.src('source/img/**/*.{jpg.png}')
-  .pipe(gulp.dest('build/img'));
+    .pipe(gulp.dest('build/img'));
 }
 
 //WebP
 
 const webpImages = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
-  .pipe(squoosh({
-    webp: {},
-    avif: {}
+    .pipe(squoosh({
+      webp: {},
+      avif: {}
   }))
-  .pipe(gulp.dest('build/img'))
+    .pipe(gulp.dest('build/img'))
 }
 
 //SVG
@@ -78,12 +78,12 @@ const svg = () =>
 
 const sprite = () => {
   return gulp.src('source/img/logo/*.svg')
-  .pipe(svgo())
-  .pipe(svgstore({
+    .pipe(svgo())
+    .pipe(svgstore({
     inlineSvg: true
   }))
-  .pipe(rename('sprite.svg'))
-  .pipe(gulp.dest('build/img'))
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('build/img'))
 }
 
 //Copy
@@ -95,7 +95,7 @@ const copy = (done) => {
   ], {
     base: 'source'
   })
-  .pipe(gulp.dest('build'))
+    .pipe(gulp.dest('build'))
   done();
 }
 
