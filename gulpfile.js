@@ -10,9 +10,8 @@ import csso from 'postcss-csso';
 import squoosh from 'gulp-libsquoosh';
 import del from 'del';
 import terser from 'gulp-terser';
-import svgo from 'svgo';
-import svgstore from 'svgstore';
-
+import svgo from 'gulp-svgmin';
+import svgstore from 'gulp-svgstore';
 
 // Styles
 
@@ -76,6 +75,7 @@ const svg = () =>
   .pipe(svgo())
   .pipe(gulp.dest('build/img'));
 
+
 const sprite = () => {
   return gulp.src('source/img/logo/*.svg')
   .pipe(svgo())
@@ -130,10 +130,9 @@ const server = (done) => {
 
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
+  gulp.watch('source/js/script.js', gulp.series(script));
   gulp.watch('source/*.html', gulp.series(html, reload));
-  gulp.watch('source/js/script.js', gulp.series(scritps));
 }
-
 
 //Build
 
