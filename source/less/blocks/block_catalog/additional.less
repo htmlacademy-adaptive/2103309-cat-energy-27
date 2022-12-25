@@ -33,6 +33,20 @@
   color: @black;
   margin: 0;
   margin-bottom: 49px;
+  position: relative;
+}
+
+.right-element::after {
+  content: "";
+  width: 20px;
+  height: 3px;
+  position: absolute;
+  background-color: @green;
+  display: block;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
 }
 
 .additional-items__item-title {

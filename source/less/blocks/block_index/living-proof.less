@@ -78,8 +78,10 @@
 @media (min-width: @width-tablet) {
   .living-proof__info-wrapper {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  }
+
+  .living-proof__list {
+    gap: 42px;
   }
 
   .living-proof__wrapper {
@@ -96,6 +98,24 @@
 
   .living-proof__cost {
     .fonts-size-living-proof__cost();
+    width: 174px;
+    text-align: end;
+  }
+
+  .living-proof__item {
+    width: auto;
+    padding-left: 33px;
+    padding-right: 33px;
+  }
+
+  .living-proof__item--border::after {
+    content: "";
+    width: 162px;
+    height: 72px;
+  }
+
+  .living-proof__number-description {
+    max-width: 125px;
   }
 }
 

@@ -47,20 +47,20 @@ const script = () => {
 // Images
 
 const optimizeImages = () => {
-  return gulp.src('source/img/**/*.{png,jpg}')
+  return gulp.src(['source/img/*.{jpg,png}', 'source/img/**/*.{jpg,png}'])
     .pipe(squoosh())
     .pipe(gulp.dest('build/img'))
 }
 
 const images = () => {
-  return gulp.src('source/img/**/*.{jpg.png}')
+  return gulp.src(['source/img/**/*.{jpg,png}', 'source/img/**/*.{jpg,png}'])
     .pipe(gulp.dest('build/img'));
 }
 
 //WebP
 
 const webpImages = () => {
-  return gulp.src('source/img/**/*.{png,jpg}')
+  return gulp.src(['source/img/**/*.{jpg,png}', 'source/img/**/*.{jpg,png}'])
     .pipe(squoosh({
       webp: {}
   }))
@@ -70,7 +70,7 @@ const webpImages = () => {
 //SVG
 
 const svg = () =>
-  gulp.src('source/img/**/*.svg')
+  gulp.src(['source/img/**/*.svg', 'source/img/*.svg'])
   .pipe(svgo())
   .pipe(gulp.dest('build/img'));
 
@@ -89,7 +89,7 @@ const sprite = () => {
 
 const copy = (done) => {
   gulp.src([
-    'source/fonts/*.{woff,woff2}',
+    'source/fonts/**/*.{woff2,woff}',
     'source/*.ico'
   ], {
     base: 'source'
