@@ -47,24 +47,24 @@ const script = () => {
 // Images
 
 const optimizeImages = () => {
-  return gulp.src(['source/img/*.{jpg,png}', 'source/img/**/*.{jpg,png}'])
+  return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(squoosh())
     .pipe(gulp.dest('build/img'))
 }
 
 const images = () => {
-  return gulp.src(['source/img/**/*.{jpg,png}', 'source/img/**/*.{jpg,png}'])
+  return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(gulp.dest('build/img'));
 }
 
 //WebP
 
 const webpImages = () => {
-  return gulp.src(['source/img/**/*.{jpg,png}', 'source/img/**/*.{jpg,png}'])
+  return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(squoosh({
       webp: {}
   }))
-    .pipe(gulp.dest('build/img'))
+    .pipe(gulp.dest('build/img'));
 }
 
 //SVG
@@ -104,13 +104,6 @@ const clean = () => {
   return del('build');
 };
 
-//Reload
-
-const reload = (done) => {
-  browser.reload();
-  done();
-}
-
 // Server
 
 const server = (done) => {
@@ -122,6 +115,13 @@ const server = (done) => {
     notify: false,
     ui: false,
   });
+  done();
+}
+
+//Reload
+
+const reload = (done) => {
+  browser.reload();
   done();
 }
 
@@ -139,14 +139,15 @@ export const build = gulp.series(
   clean,
   copy,
   optimizeImages,
-  gulp.parallel (
-    html,
+  gulp.parallel(
     styles,
+    html,
     script,
     svg,
     sprite,
     webpImages
-));
+  ),
+);
 
 //Default
 
@@ -155,12 +156,12 @@ export default gulp.series(
   copy,
   images,
   gulp.parallel (
-    html,
     styles,
+    html,
     script,
     svg,
     sprite,
-    webpImages,
+    webpImages
     ),
     gulp.series(
       server,
