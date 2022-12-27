@@ -9,6 +9,9 @@
   <link rel="icon" href="img/favicon/32.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldmedium.woff2"  type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <title>Cat Energy</title>
 </head>
 <body class="page__body">
@@ -72,7 +75,7 @@
     </svg>
 
   </button>
-    <nav class="navigation navigation--closed navigation--nojs">
+    <nav class="navigation navigation--nojs">
 
       <div class="navigation__wrapper">
         <ul class="navigation__list">
@@ -126,7 +129,7 @@
             </div>
               </dl>
             </div>
-            <button class="catalog__card-button button" type="button">Заказать</button>
+            <button class="catalog__card-button button" type="button"><span>Заказать</span></button>
           </li>
           <li class="catalog__item">
             <div class="catalog__card">
@@ -152,7 +155,7 @@
             </div>
               </dl>
             </div>
-            <button class="catalog__card-button button" type="button">Заказать</button>
+            <button class="catalog__card-button button" type="button"><span>Заказать</span></button>
           </li>
           <li class="catalog__item">
             <div class="catalog__card">
@@ -178,7 +181,7 @@
             </div>
               </dl>
             </div>
-            <button class="catalog__card-button button" type="button">Заказать</button>
+            <button class="catalog__card-button button" type="button"><span>Заказать</span></button>
           </li>
           <li class="catalog__item">
             <div class="catalog__card">
@@ -204,7 +207,7 @@
             </div>
               </dl>
             </div>
-            <button class="catalog__card-button button" type="button">Заказать</button>
+            <button class="catalog__card-button button" type="button"><span>Заказать</span></button>
           </li>
           <li class="catalog__item">
             <div class="catalog__card">
@@ -230,7 +233,7 @@
             </div>
               </dl>
             </div>
-            <button class="catalog__card-button button" type="button">Заказать</button>
+            <button class="catalog__card-button button" type="button"><span>Заказать</span></button>
           </li>
           <li class="catalog__item">
             <div class="catalog__card">
@@ -256,7 +259,7 @@
             </div>
               </dl>
             </div>
-            <button class="catalog__card-button button" type="button">Заказать</button>
+            <button class="catalog__card-button button" type="button"><span>Заказать</span></button>
           </li>
           <li class="catalog__item">
             <div class="catalog__card">
@@ -282,7 +285,7 @@
             </div>
               </dl>
             </div>
-            <button class="catalog__card-button button" type="button">Заказать</button>
+            <button class="catalog__card-button button" type="button"><span>Заказать</span></button>
           </li>
           <li class="catalog__item catalog__item--more" >
             <div class="catalog__card catalog__card--more">
@@ -296,8 +299,8 @@
     </section>
 <!-- additional-items -->
 <div class="additional">
-    <section class="additional-items additional-items--right-line">
-      <h2 class="left-element right-element additional-items__title">Дополнительные товары</h2>
+    <section class="additional-items">
+      <h2 class="decor-element additional-items__title">Дополнительные товары</h2>
       <div class="additional-items__wrapper">
         <ul class="additional-items__list">
           <li class="additional-items__item">
@@ -306,7 +309,7 @@
               <p class="additional-items__card-title">1 упаковка (100 г)</p>
               <p class="additional-items__card-price">200 ₽</p>
             </div>
-            <button class="additional-items-button button" type="button">Заказать</button>
+            <button class="additional-items-button button" type="button"><span>Заказать</span></button>
           </li>
           <li class="additional-items__item">
             <h3 class="additional-items__item-title">Питьевая вода</h3>
@@ -314,7 +317,7 @@
               <p class="additional-items__card-title">5 литров</p>
               <p class="additional-items__card-price">50 ₽</p>
             </div>
-            <button class="additional-items-button button" type="button">Заказать</button>
+            <button class="additional-items-button button" type="button"><span>Заказать</span></button>
           </li>
           <li class="additional-items__item">
             <h3 class="additional-items__item-title">Молоко</h3>
@@ -322,7 +325,7 @@
               <p class="additional-items__card-title">1 литр</p>
               <p class="additional-items__card-price">100 ₽</p>
             </div>
-            <button class="additional-items-button button" type="button">Заказать</button>
+            <button class="additional-items-button button" type="button"><span>Заказать</span></button>
           </li>
           <li class="additional-items__item">
             <h3 class="additional-items__item-title">Витамины</h3>
@@ -330,7 +333,7 @@
               <p class="additional-items__card-title">1 упаковка (30 г)</p>
               <p class="additional-items__card-price">300 ₽</p>
             </div>
-            <button class="additional-items-button button" type="button">Заказать</button>
+            <button class="additional-items-button button" type="button"><span>Заказать</span></button>
           </li>
         </ul>
       </div>
@@ -400,5 +403,6 @@
       </div>
     </div>
   </footer>
+  <script src="./js/script.js"></script>
 </body>
 </html>

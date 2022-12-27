@@ -28,6 +28,7 @@
 
 .additional-items__title {
   .main-fonts();
+  display: inline-block;
   font-size: 24px;
   line-height: 24px;
   color: @black;
@@ -36,15 +37,19 @@
   position: relative;
 }
 
-.right-element::after {
+.decor-element_common() {
   content: "";
   position: absolute;
-  display: block;
-  width: 50px;
-  height: 5px;
+  height: 2px;
+  top: 50%;
+  width: 1000%;
   background-color: @green;
-  top: 0;
-  right: 0;
+  z-index: -1;
+}
+
+.decor-element::after {
+  .decor-element_common();
+  left: calc(100% + 36px);
 }
 
 .additional-items__item-title {
@@ -61,6 +66,7 @@
   .additional-items__title {
     .fonts-size-form__subtitle();
     margin-bottom: 80px;
+    padding-left: 37px;
   }
 
   .additional-items__item-title {
@@ -88,6 +94,11 @@
     display: flex;
     justify-content: flex-end;
     column-gap: 49px;
+  }
+
+  .decor-element::before {
+    .decor-element_common();
+    right: calc(100% + 7px);
   }
 }
 
