@@ -9,6 +9,9 @@
   <link rel="icon" href="img/favicon/32.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldmedium.woff2"  type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <title>Cat Energy</title>
 </head>
 <body class="page__body">
@@ -158,7 +161,7 @@
       </div>
       <div class="form-page__user-data__wrapper">
         <fieldset class="user-data">
-          <legend class="left-element right-element user-data__title">Контактные данные (владельца кота)</legend>
+          <legend class="user-data__title"><span class="decor-element">Контактные данные </span><span>(владельца кота)</span></legend>
           <ul class="user-data__list">
             <li class="user-data__item">
               <label class="user-data__label" for="email">E-&nbsp;mail:*</label>
@@ -179,13 +182,13 @@
           </ul>
         </fieldset>
         <fieldset class="comment">
-          <legend class="left-element right-element comment__title">Комментарий</legend>
+          <legend class="decor-element comment__title">Комментарий</legend>
             <textarea class="comment__field field" name="comment" id="comment" cols="30" rows="10">Расскажите обо всех повадках кота</textarea>
         </fieldset>
       </div>
       <div class="form-page__additionally__wrapper">
         <fieldset class="additionally">
-          <legend class="left-element right-element additionally__title">Дополнительно</legend>
+          <legend class="decor-element additionally__title">Дополнительно</legend>
           <ul class="additionally__list">
             <li class="additionally__item">
               <Label class="additionally__label">
