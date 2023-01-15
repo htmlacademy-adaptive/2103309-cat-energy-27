@@ -1,0 +1,28 @@
+.program-weight__button:hover,
+.program-weight__button:hover svg {
+  width: 32px;
+  background-color: inherit;
+  offset-path: path("M 18 6 h 32");
+}
+
+.program-weight__button:active,
+.program-weight__button:active svg {
+  opacity: 0.3;
+}
+
+
+.program-weight__button-text {
+  .font-size_program-weight__button-text_mobile();
+  padding-right: 15px;
+}
+
+@media (min-width: @width-tablet) {
+  .program-weight__button {
+    line-height: 30px;
+    font-size: 20px;
+  }
+
+  .program-weight__button-text {
+    .font-size_program-weight__button-text_table();
+  }
+}

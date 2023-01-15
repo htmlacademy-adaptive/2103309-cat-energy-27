@@ -5,11 +5,12 @@
 
 .advantages__title {
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 46px;
 }
 
 .advantages__item-description {
   .margin-padding_off();
+  .font-size-advantages__item-description_mobile();
 }
 
 .advantages__list {
@@ -78,20 +79,26 @@
   .advantages {
     .global-padding_tablet();
     border-bottom: 1px solid @decor_line;
-    padding-bottom: 47px;
-    margin-bottom: 43px;
+    padding-bottom: 32px;
+    margin-bottom: 8px;
   }
 
   .advantages__list {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    column-gap: 42px;
+    row-gap: 30px;
   }
 
   .advantages__item {
     display: grid;
-    grid-template-columns: 115px 115px;
-    grid-template-rows: 140px 140px;
+    grid-template-columns: 115px 130px;
+    grid-template-rows: 139px 140px;
     align-items: start;
+  }
+
+  .advantages__title {
+    margin-bottom: 40px;
   }
 
   .advantages__wrapper .advantages__title {
@@ -100,6 +107,7 @@
 
   .advantages__item-description {
     line-height: 24px;
+    font-size: 16px;
     grid-row: 2 / -1;
     grid-column: 1 / -1;
   }
@@ -109,7 +117,7 @@
     .main-fonts();
     font-size: 280px;
     color: @grey-light;
-    right: 0;
+    right: 5px;
     grid-column: 2 / 2;
     grid-row: 2 / -1;
     z-index: -1;
@@ -135,21 +143,27 @@
   .advantages__item--leaf::after {
     content: "1";
     .back-element();
+    top: -17px;
+    right: 25px;
   }
 
   .advantages__item--powder::after {
     content: "2";
     .back-element();
+    top: -17px;
   }
 
   .advantages__item--food::after {
     content: "3";
     .back-element();
+    top: -17px;
   }
 
   .advantages__item--time::after {
     content: "4";
     .back-element();
+    top: -17px;
+    right: 2px;
   }
 }
 
@@ -160,12 +174,22 @@
   }
 
   .advantages__title {
-    margin-bottom: 32px;
+    margin-bottom: 43px;
   }
 
   .advantages {
     .global-padding_desktop();
-    margin-bottom: 69px;
+    margin-bottom: 60px;
     border-bottom: none;
+  }
+
+  .advantages__item--leaf::after {
+    right: 20px;
+  }
+
+  .advantages__item--powder::after,
+  .advantages__item--food::after,
+  .advantages__item--time::after {
+    right: 0;
   }
 }

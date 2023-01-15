@@ -1,7 +1,7 @@
 .form-page__required-options__wrapper {
   .global-padding_mobile();
   padding-bottom: 19px;
-  padding-top: 22px;
+  padding-top: 20px;
   border-bottom: 1px solid @form_decor_line;
 }
 
@@ -72,6 +72,10 @@
     margin-bottom: 71px;
   }
 
+  .required-options__list {
+    gap: 10px;
+  }
+
   .required-options__label {
     font-size: 20px;
     line-height: 30px;
@@ -83,7 +87,7 @@
   }
 
   .required-options__radio-label {
-    padding-left: 55px;
+    padding-left: 60px;
   }
 
   .required-options__field[type="radio"]:checked + .required-options__radio-mark::after {
@@ -94,7 +98,7 @@
 
 @media (min-width: @width-desktop) {
   .form-page__required-options__wrapper {
-    max-width: 568px;
+    max-width: 514px;
     width: 100%;
     margin-bottom: 0;
   }

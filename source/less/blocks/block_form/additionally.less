@@ -50,7 +50,7 @@
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 11px;
 }
 
 .additionally {
@@ -63,7 +63,7 @@
   font-size: 24px;
   line-height: 26px;
   color: @black;
-  margin-bottom: 34px;
+  margin-bottom: 32px;
   position: relative;
 }
 
@@ -76,17 +76,17 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 32px;
+    gap: 30px 60px;
   }
 
   .form-page__additionally__wrapper {
     padding: 0;
-    margin-bottom: 61px;
+    margin-bottom: 53px;
   }
 
   .additionally__title {
     .fonts-size-form__subtitle();
-    margin-bottom: 57px;
+    margin-bottom: 55px;
   }
 
   .additionally__checkbox-title {
@@ -107,6 +107,10 @@
   .additionally__list {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+  }
+
+  .form-page__additionally__wrapper {
+    margin-bottom: 62px;
   }
 }
