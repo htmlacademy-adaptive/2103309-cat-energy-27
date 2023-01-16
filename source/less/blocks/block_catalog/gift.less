@@ -2,7 +2,7 @@
   line-height: 20px;
   text-align: center;
   color: #ffffff;
-  padding: 0 60px 43px;
+  padding: 0 57px 43px;
 
 
   &--back-picture {
@@ -25,27 +25,64 @@
 .gift__description {
   margin: 0;
   padding-top: 187px;
+  position: relative;
 
-  &--icon {
+  &--icon::after {
+    content: "";
+    width: 100%;
+    height: 130px;
+    position: absolute;
     background-image: url("../img/gift_icon.svg");
     background-repeat: no-repeat;
-    background-position: center;
-    top: 61px;
+    background-position: center 64px;
+    top: 1px;
     left: 0;
     margin: auto;
   }
 }
 
 @media (min-width: @width-tablet) {
+  .gift {
+    padding-right: 120px;
+  }
+
   .gift--back-picture {
     margin: 0 30px 76px;
+  }
+
+  .gift__description {
+    padding: 71px 10px 26px 366px;
+    text-align: left;
+  }
+
+  .gift__description--icon::after {
+    width: 80px;
+    left: 20px;
   }
 }
 
 @media (min-width: @width-desktop) {
+  .gift {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
   .gift--back-picture {
     margin: 0;
+    margin-left: 79px;
     max-width: 245px;
     max-height: 290px;
+  }
+
+  .gift__description {
+    padding-top: 185px;
+    padding-left: 0;
+    padding-bottom: 0;
+    text-align: center;
+  }
+
+  .gift__description--icon::after {
+    left: 60px;
+    top: -3px;
   }
 }

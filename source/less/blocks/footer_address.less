@@ -24,9 +24,9 @@
 }
 
 .address__description {
-  line-height: 20px;
-  font-style: normal;
+  .font-size-address__description_mobile();
   max-width: 140px;
+  font-style: normal;
 }
 
 .address__map {
@@ -35,8 +35,8 @@
 
 @media (min-width: @width-tablet) {
   .address__wrapper {
-    padding: 56px 70px;
-    background-color: @grey-light;
+    padding: 60px 70px;
+    text-align: end;
   }
 
   .address__title {
@@ -47,6 +47,7 @@
 
   .address__description {
     max-width: 160px;
+    font-size: 16px;
   }
 }
 

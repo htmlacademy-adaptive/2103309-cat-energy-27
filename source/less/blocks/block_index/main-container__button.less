@@ -3,10 +3,10 @@
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: @green;
-  display: block;
   text-align: center;
   margin-bottom: 20px;
   width: 100%;
+  z-index: 1;
 }
 
 @media (max-width: @mobile-width-only) {
@@ -17,10 +17,11 @@
 
 @media (min-width: @width-tablet) {
   .main-container__button {
-    padding: 14px 26px;
-    width: auto;
+    padding: 17px 24px;
+    width: 245px;
     order: -1;
-    margin-left: 117px;
+    margin-left: 102px;
+    z-index: 2;
   }
 
   .not-mobile {
@@ -36,5 +37,10 @@
   .main-container__button-wrapper {
     top: 207px;
     grid-column: 1 / 2;
+  }
+
+  .main-container__button {
+    margin-left: 80px;
+    max-width: 196px;
   }
 }

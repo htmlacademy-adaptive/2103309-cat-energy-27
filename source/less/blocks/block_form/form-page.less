@@ -1,3 +1,11 @@
+.form-page__text-wrapper {
+  border-top: 1px solid @form_decor_line;
+}
+
+.form-page__title {
+  padding-top: 27px;
+}
+
 .form-page__description {
   font-size: 14px;
 }
@@ -5,6 +13,10 @@
 @media (min-width: @width-tablet) {
   .form-page {
     padding: 0 70px;
+  }
+
+  .form-page__text-wrapper {
+    border-top: none;
   }
 
   .form-page__title {
@@ -23,10 +35,14 @@
     .global-padding_desktop();
   }
 
+  .form-page__title {
+    padding-top: 41px;
+  }
+
   .form-page__desktop-wrapper {
     display: flex;
     padding-top: 66px;
     column-gap: 80px;
-    margin-bottom: 65px;
+    margin-bottom: 68px;
   }
 }

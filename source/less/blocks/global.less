@@ -18,10 +18,23 @@
 @catalog_popover_bg: #ffffff;
 @decor_line:#E6E6E6;
 @field_border_color: #E7E7E7;
+@catalog_decor_line: #d9d9d9;
 @form_decor_line: #d9d9d9;
 @footer_decor_line: #d9d9d9;
+@programm_decor_line: #d9d9d9;
 @catalog_popover_line: #E6E6E6;
 @error_status: #FF8282;
+
+.map {      //Здесь должен быть селектор по id, но он запрещен правилами, и проверка не проходит
+  height: 61vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: @width-tablet) {
+    height: 70vh;
+  }
+}
 
 html {
   height: 100%;
@@ -98,7 +111,7 @@ img {
 }
 
 .padding-main-title_tablet() {
-  padding-left: 117px;
+  padding-left: 95px;
 }
 
 /*viewports*/
@@ -163,6 +176,16 @@ img {
   line-height: 30px;
 }
 
+.font-size-advantages__item-description_mobile() {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.font-size-address__description_mobile() {
+  font-size: 14px;
+  line-height: 20px;
+}
+
 .living-proof__number-tablet() {
   font-size: 30px;
   line-height: 37px;
@@ -176,4 +199,14 @@ img {
 .button-font-size_tablet() {
   font-size: 20px;
   line-height: 20px;
+}
+
+.font-size_program-weight__button-text_mobile() {
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.font-size_program-weight__button-text_table() {
+  font-size: 20px;
+  line-height: 30px;
 }
