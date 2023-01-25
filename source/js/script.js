@@ -1,9 +1,11 @@
+let navWrapper = document.querySelector('.main-header__wrapper');
+let navToggle = document.querySelector('.navigation-toggle');
 let navMain = document.querySelector('.navigation');
-let navToggle = document.querySelector('.navigation__toggle');
 
-navMain.classList.remove('navigation--nojs');
+navWrapper.classList.remove('main-header__wrapper--nojs');
 
 navToggle.addEventListener('click', function() {
+
   if (navMain.classList.contains('navigation--closed')) {
     navMain.classList.remove('navigation--closed');
     navMain.classList.add('navigation--opened');
@@ -13,7 +15,7 @@ navToggle.addEventListener('click', function() {
     navMain.classList.remove('navigation--opened');
 }
 
-let changeIcon = document.getElementsByClassName('navigation__popower-icon')
+let changeIcon = document.getElementsByClassName('navigation-toggle__popower-icon')
 
 for (item of changeIcon) {
 item.classList.toggle('hide')

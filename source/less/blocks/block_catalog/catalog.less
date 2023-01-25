@@ -246,7 +246,11 @@
 
   .catalog__card-picture {
     position: absolute;
-    bottom: 190px;
+    top: -45px;
+  }
+
+  .catalog__item:nth-child(2n) .catalog__card-picture {
+    top: -73px;
   }
 
   .button--last-card {
@@ -258,6 +262,15 @@
 @media (min-width: @width-desktop) {
   .header-catalog {
     margin-bottom: 50px;
+  }
+
+  .catalog__item:nth-child(5) .catalog__card-picture,
+  .catalog__item:nth-child(7) .catalog__card-picture {
+    top: -80px;
+  }
+
+  .catalog__item:nth-child(2n) .catalog__card-picture {
+    top: -82px;
   }
 
   .catalog__wrapper {
@@ -275,7 +288,7 @@
   }
 
   .catalog__card-picture {
-    width: 100%;
     margin: 0 auto;
+    top: -51px;
   }
 }

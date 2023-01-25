@@ -19,10 +19,26 @@
   line-height: 18px;
   text-transform: uppercase;
   color: @black-max_light;
-  border: 1px solid #e7e7e7;
-  outline: none;
-  padding: 8px 13px 11px 16px;
+  outline: 1px solid #e7e7e7;
+  border: none;
+  padding: 8px 9px 11px 16px;
+  margin: 2px;
+  width: 98%;
 }
+
+.comment__field:hover {
+  outline: 2px solid @form_hover;
+}
+
+.comment__field:focus {
+  outline: 2px solid @black-max_light;
+}
+
+/*поведение элемента поля при ошибке
+.form-page__main-data__field:invalid {
+  border: 2px solid @error_status;
+}
+*/
 
 @media (min-width: @width-tablet) {
   .comment__title {
