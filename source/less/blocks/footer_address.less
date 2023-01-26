@@ -27,6 +27,20 @@
   .font-size-address__description_mobile();
   max-width: 140px;
   font-style: normal;
+
+  @media (min-width: @width-mobile) and (max-width: @mobile-width-only) {
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  @media (min-width: @width-desktop) {
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
 }
 
 .address__map {

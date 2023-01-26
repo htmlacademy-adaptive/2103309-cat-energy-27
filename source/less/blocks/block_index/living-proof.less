@@ -1,6 +1,6 @@
 .living-proof__wrapper {
   background-color: @living-proof-bg;
-  padding: 27px 20px 40px;
+  padding: 27px 20px 50px;
 }
 
 .living-proof__description {
@@ -11,14 +11,14 @@
 
 .living-proof__title {
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 43px;
 }
 
 .living-proof__list {
   .margin-padding_off();
   display: flex;
   justify-content: space-between;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
   gap: 32px;
 }
 
@@ -162,9 +162,12 @@
   }
 
   .living-proof__cost {
-    width: auto;
+    display: flex;
+    max-width: 327px;
+    width: 100%;
     text-align: start;
     margin-left: 0;
+    justify-content: space-between;
   }
 
   .living-proof__number-description {
