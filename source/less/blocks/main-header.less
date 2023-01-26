@@ -2,32 +2,67 @@
   position: relative;
 }
 
+.main-header__logo {
+  z-index: 1;
+  max-width: 192px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
 .main-header__wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px 18px;
+  padding: 10px 20px 17px;
+  align-items: flex-end;
+
+  /*меню без использования JavaScript*/
+  @media (max-width: @mobile-width-only) {
+    &--nojs {
+      flex-direction: column;
+      padding: 10px 0 0;
+      align-items: center;
+    }
+  }
+}
+
+/*меню без использования JavaScript*/
+.main-header__wrapper--nojs .navigation-toggle {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+}
+
+.main-header__wrapper--nojs .navigation {
+  display: block;
+  position: static;
+  padding: 10px 0 0;
+}
+
+.main-header__wrapper--nojs .main-header__logo {
+  justify-content: space-around;
 }
 
 .logo__header-image {
   width: 128px;
 }
 
-.main-header_logo--mobile:hover,
-.main-header_logo--tablet:hover,
-.main-header_logo--desktop:hover {
+.main-header__logo__mobile:hover,
+.main-header__logo__tablet:hover,
+.main-header__logo__desktop:hover {
   opacity: 0.8;
 }
 
-.main-header_logo--mobile:active,
-.main-header_logo--tablet:active,
-.main-header_logo--desktop:active {
+.main-header__logo__mobile:active,
+.main-header__logo__tablet:active,
+.main-header__logo__desktop:active {
   opacity: 0.6;
 }
 
 @media (max-width: @width-tablet) {
-  .main-header_logo--tablet,
-  .main-header_logo--desktop {
+  .main-header__logo__tablet,
+  .main-header__logo__desktop {
     display: none;
   }
 }
@@ -36,15 +71,16 @@
   .main-header__wrapper {
     border-bottom: none;
     padding: 20px 30px 17px;
+    align-items: center;
   }
 
-  .main-header_logo--mobile,
-  .main-header_logo--desktop,
-  .main-header_logo--text {
+  .main-header__logo__mobile,
+  .main-header__logo__desktop,
+  .main-header__logo__text {
     display: none;
   }
 
-  .main-header_logo--tablet {
+  .main-header__logo__tablet {
     display: block;
   }
 
@@ -62,6 +98,11 @@
     padding: 53px 110px 17px;
   }
 
+  .main-header__logo {
+    max-width: 202px;
+    width: 100%;
+  }
+
   .header-index {
     position: absolute;
     left: 0;
@@ -70,13 +111,17 @@
     margin: 0 auto;
   }
 
-  .main-header_logo--mobile,
-  .main-header_logo--tablet,
-  .main-header_logo--text {
+  .main-header__logo__mobile,
+  .main-header__logo__tablet,
+  .main-header__logo__text {
     display: none;
   }
 
-  .main-header_logo--desktop {
+  .main-header__logo__desktop {
     display: block;
+  }
+
+  .main-header__wrapper--nojs .navigation {
+    display: flex;
   }
 }

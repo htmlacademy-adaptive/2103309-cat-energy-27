@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=2d09e72a-be66-452b-81ee-d05621f3854b&lang=ru_RU"></script>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
   <link rel="icon" href="img/favicon/32.svg" type="image/svg+xml">
@@ -32,8 +31,8 @@
     </symbol>
 
     <symbol id="programm_arrow" viewBox="0 0 32 12" fill="none">
-      <path class="programm_arrow_path-1" stroke="#000" stroke-width="2" d="M0 6h18"/>
-      <path  class="programm_arrow_path-2" fill="#000" d="m24 6-6.75 5.2V.8L24 6Z"/>
+      <path stroke="#000" stroke-width="2" d="M0 6h18"/>
+      <path fill="#000" d="m24 6-6.75 5.2V.8L24 6Z"/>
     </symbol>
 
     <symbol id="slider_arrows" viewBox="0 0 24 18" fill="none">
@@ -53,38 +52,35 @@
   </svg>
 <!-- header -->
   <header class="main-header header-index">
-    <div class="main-header__wrapper">
-        <svg  class="main-header_logo--mobile" width="34" height="38">
+    <div class=" main-header__wrapper main-header__wrapper--nojs">
+      <div class="main-header__logo">
+        <svg  class="main-header__logo__mobile" width="34" height="38">
           <use href="#logo-mobile"></use>
         </svg>
 
-        <svg class="main-header_logo--tablet" width="174" height="52">
+        <svg class="main-header__logo__tablet" width="174" height="52">
           <use href="#logo-tablet"></use>
         </svg>
 
-        <svg class="main-header_logo--desktop" width="202" height="59">
+        <svg class="main-header__logo__desktop" width="202" height="59">
           <use href="#logo-desktop"></use>
         </svg>
-
-        <svg class="main-header_logo--text" width="128" height="24">
+        <svg class="main-header__logo__text" width="100" height="24">
           <use href="#logo-text"></use>
         </svg>
-      <button class="navigation__toggle"> <!-- открытие/закрытие навигации -->
+      </div>
+      <button class="navigation-toggle"> <!-- открытие/закрытие навигации-->
         <span class="visually-hidden">Открыть/Закрыть меню</span>
-
-        <svg class="navigation__popower-icon" width="24" height="18">
+        <svg class="navigation-toggle__popower-icon" width="24" height="18">
           <use href="#navigation_burger"></use>
         </svg>
-
-        <svg class="navigation__popower-icon  hide" width="20" height="20">
+        <svg class="navigation-toggle__popower-icon  hide" width="20" height="20">
           <use href="#navigation_burger--close"></use>
         </svg>
-
       </button>
-      <nav class="navigation navigation--closed navigation--nojs">
-
+      <nav class="navigation navigation--closed">
         <div class="navigation__wrapper">
-          <ul class="navigation__list navigation__item--index">
+          <ul class="navigation__list navigation__list--index">
             <li class="navigation__item navigation__item--index-white navigation__item--current">
               <a href="#" target="_blank">
                 Главная
@@ -123,7 +119,7 @@
 
           <source media="(min-width: 768px)" srcset="img/main_picture/index-can-tablet.jpg 1x, img/main_picture/index-can-tablet@2x.jpg 2x">
 
-          <source type="image/webp" srcset="img/main_picture/index-can-desktop.webp 1x, img/main_picture/index-can-desktop@2x.webp 2x">
+          <source type="image/webp" srcset="img/main_picture/index-can-mobile.webp 1x, img/main_picture/index-can-mobile@2x.webp 2x">
 
           <img src="img/main_picture/index-can-mobile.png" srcset="img/main_picture/index-can-mobile@2x.png 2x" width="280" height="270" alt="Банка корма для котов с курицей.">
         </picture>
@@ -142,7 +138,7 @@
           <div class="program-weight__button__wrapper">
             <a class="program-weight__button button" href="catalog/">
               <span class="program-weight__button-text">Каталог slim</span>
-              <svg width="24" height="12">
+              <svg class="programm-arrow-icon" width="32" height="12">
                 <use href="#programm_arrow"></use>
               </svg>
             </a>
@@ -155,7 +151,7 @@
           <div class="program-weight__button__wrapper">
             <a class="program-weight__button button" href="catalog/">
               <span class="program-weight__button-text">Каталог pro</span>
-              <svg width="24" height="12">
+              <svg class="programm-arrow-icon" width="32" height="12">
                 <use href="#programm_arrow"></use>
               </svg>
             </a>
@@ -199,7 +195,7 @@
               <dd class="living-proof__number-description">затрачено времени</dd>
             </div>
           </dl>
-          <p class="living-proof__cost">Затраты на питание: 15 000 РУБ.</p>
+          <p class="living-proof__cost">Затраты на питание: <span>15 000 РУБ.</span></p>
         </div>
       </div>
         <div class="slider">
@@ -219,13 +215,8 @@
               <img src="img/cat_slider/after_mobile@1x.png" srcset="img/cat_slider/after_mobile@2x.png 2x" width="280" height="256" alt="Худой кот.">
             </picture>
           </div>
-          <div class="slider__line">
-            <div class="slider__scrubber">
-              <svg width="24" height="18">
-                <use href="#slider_arrows"></use>
-              </svg>
-            </div>
-          </div>
+          <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown" class="range">
+        <div class="button-line" aria-hidden="true"></div>
         </div>
     </section>
   </main>
@@ -236,10 +227,12 @@
       <h2 class="visually-hidden">Где нас найти.</h2>
       <div class="address__wrapper">
         <p class="address__title">приглашаем <br>к сотрудничеству дилеров!</p>
-        <address class="address__description">ул. Большая<br>Конюшенная, д. 19/8 Санкт-Петербург
+        <address class="address__description">ул. Большая<br>Конюшенная, д. 19/8 <p>Санкт-Петербург</p>
         </address>
       </div>
-      <div id="map"></div>
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8226084133137!2d30.315220215990376!3d59.96826598188698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sth!4v1674371622171!5m2!1sru!2sth" width="600" height="450" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </section>
     <div class="main-footer__wrapper">
       <h2 class="visually-hidden">Дополнительная информация</h2>
@@ -288,7 +281,6 @@
       </div>
     </div>
   </footer>
-<script src="./js/script.js"></script>
-<script src="js/icon_map.js.js"></script>
+  <script src="./js/script.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 .form-page__user-data__wrapper {
   .global-padding_mobile();
   padding-top: 26px;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
 }
 
 .user-data__label {
@@ -13,6 +13,10 @@
   padding-left: 15px;
   position: relative;
   font-size: 16px;
+}
+
+.user-data__field:hover {
+  outline: 2px solid @form_hover;
 }
 
 .user-data__field:focus {
@@ -41,8 +45,8 @@
   align-items: center;
 }
 
-.user-data__item--email-icon,
-.user-data__item--tel-icon {
+.user-data__field__email-icon,
+.user-data__field__tel-icon {
   stroke: #000000;
   position: absolute;
   top: 0;
@@ -51,14 +55,14 @@
   margin: auto;
 }
 
-.user-data__field:focus + .user-data__item--email-icon,
-.user-data__field:focus + .user-data__item--tel-icon {
+.user-data__field:focus + .user-data__field__email-icon,
+.user-data__field:focus + .user-data__field__tel-icon {
   stroke: @green;
 }
 
 /* поведение элемента  иконка при ошибке
-.user-data__field:invalid + .user-data__item--email-icon,
-.user-data__field:invalid + .user-data__item--tel-icon {
+.user-data__field:invalid + .user-data__field__email-icon,
+.user-data__field:invalid + .user-data__field__tel-icon {
   stroke: @error_status;
 }
 */
@@ -81,7 +85,7 @@
 @media (min-width: @width-tablet) {
   .form-page__user-data__wrapper {
     padding: 0;
-    margin-bottom: 65px;
+    margin-bottom: 60px;
   }
 
   .user-data {

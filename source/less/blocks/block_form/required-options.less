@@ -22,9 +22,17 @@
   border: 1px solid @required-options-border;
   display: block;
   border-radius: 50%;
-  top: 0;
+  top: -5px;
   bottom: 0;
-  margin: auto;
+  margin: 0 auto;
+}
+
+.required-options__radio-mark:hover {
+  border: 1px solid @radio_hover;
+}
+
+.required-options__field + .required-options__radio-mark:disabled {
+  opacity: 0.3;
 }
 
 .required-options__field[type="radio"]:checked + .required-options__radio-mark::after {
@@ -63,6 +71,7 @@
   color: @black-light;
   position: relative;
   padding-left: 45px;
+  float: left;
 }
 
 @media (min-width: @width-tablet) {

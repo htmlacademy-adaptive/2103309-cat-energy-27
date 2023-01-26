@@ -10,6 +10,20 @@
   font-size: 14px;
 }
 
+.form-page__main-data__field:hover {
+  outline: 2px solid @form_hover;
+}
+
+.form-page__main-data__field:focus {
+  outline: 2px solid @black-max_light;
+}
+
+/*поведение элемента поля при ошибке
+.form-page__main-data__field:invalid {
+  outline: 2px solid @error_status;
+}
+*/
+
 @media (min-width: @width-tablet) {
   .form-page {
     padding: 0 70px;

@@ -1,10 +1,10 @@
 .form-page__additionally__wrapper {
   .global-padding_mobile();
-  margin-bottom: 34px;
+  margin-bottom: 32px;
 }
 
 .additionally__item {
-  padding: 6px 0;
+  padding: 7px 0;
 }
 
 .additionally__label {
@@ -13,8 +13,9 @@
   font-size: 16px;
   line-height: 18px;
   color: @black-max_light;
-  padding-left: 46px;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .additionally__checkbox-mark {
@@ -23,9 +24,15 @@
   height: 30px;
   border: 1px solid @additional-border;
   display: block;
-  top: 0;
-  bottom: 0;
-  margin: auto;
+  margin-right: 16px;
+}
+
+.additionally__checkbox-mark:hover {
+  border: 1px solid @radio_hover;
+}
+
+.additionally__field[type="checkbox"] + .additionally__checkbox-mark:disabled {
+  opacity: 0.3;
 }
 
 .additionally__field[type="checkbox"]:checked + .additionally__checkbox-mark::after {
@@ -70,6 +77,8 @@
 
 .additionally__checkbox-title {
   color: @black;
+  padding-left: 46px;
+  float: left;
 }
 
 @media (min-width: @width-tablet) {
@@ -77,7 +86,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 30px 60px;
+    gap: 28px 60px;
   }
 
   .form-page__additionally__wrapper {
@@ -92,10 +101,7 @@
 
   .additionally__checkbox-title {
     .font-size-form-page_tablet();
-  }
-
-  .additionally__label {
-    padding-left: 56px;
+    padding-left: 60px;
   }
 
   .additionally__checkbox-mark {
@@ -108,10 +114,25 @@
   .additionally__list {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
   }
 
   .form-page__additionally__wrapper {
     margin-bottom: 62px;
+  }
+
+  .additionally__checkbox-title {
+    padding-left: 60px;
+  }
+
+  .additionally__item:nth-child(1) {
+    margin-right: 44px;
+  }
+
+  .additionally__item:nth-child(2) {
+    margin-right: 78px;
+  }
+
+  .additionally__item:nth-child(3) {
+    margin-right: 138px;
   }
 }

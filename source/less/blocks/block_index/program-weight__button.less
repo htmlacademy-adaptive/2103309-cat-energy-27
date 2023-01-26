@@ -1,8 +1,11 @@
+.program-weight__button {
+  display: flex;
+  align-items: center;
+}
+
 .program-weight__button:hover,
 .program-weight__button:hover svg {
-  width: 32px;
   background-color: inherit;
-  offset-path: path("M 18 6 h 32");
 }
 
 .program-weight__button:active,
@@ -10,6 +13,15 @@
   opacity: 0.3;
 }
 
+.programm-arrow-icon {
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+
+.programm-arrow-icon:hover {
+  transform: scaleX(1.3);
+}
 
 .program-weight__button-text {
   .font-size_program-weight__button-text_mobile();
@@ -24,5 +36,6 @@
 
   .program-weight__button-text {
     .font-size_program-weight__button-text_table();
+    padding-right: 26px;
   }
 }
