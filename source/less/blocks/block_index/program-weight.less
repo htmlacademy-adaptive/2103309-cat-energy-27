@@ -113,11 +113,11 @@
   }
 
   .program-weight__card {
-    padding: 75px 260px 52px 52px;
+    padding: 75px 260px 55px 52px;
   }
 
   .program-weight {
-    margin-bottom: 49px;
+    margin-bottom: 47px;
     padding: 0 30px;
   }
 
@@ -163,7 +163,7 @@
   .thin-cat::after {
     .program-weight__title-general();
     .program-weight__icon-size_tablet();
-    top: 6px;
+    top: 14px;
     right: 62px;
   }
 
@@ -205,19 +205,19 @@
 
   .program-weight__card {
     max-width: 570px;
-    padding: 77px 54px 59px 52px;
+    padding: 77px 54px 58px 53px;
     box-sizing: border-box;
   }
 
   .program-weight__description {
     margin-right: 0;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
   }
 
   .program-weight__title--thin,
   .program-weight__title--muscular {
-    padding-left: 162px;
-    margin-bottom: 71px;
+    padding-left: 160px;
+    margin-bottom: 74px;
   }
 
   .program-weight__title--thin::before {
@@ -227,14 +227,16 @@
     .program-weight__title-general();
     width: 70px;
     height: 100px;
-    top: -16px;
+    top: -11px;
   }
 
-  .program-weight__title--thin::after {
+  .program-weight__title--thin::after,
+  .program-weight__title--muscular::after {
     .program-weight__title-general();
     background-color: @green;
     border-radius: 50%;
-    left: 0;
+    top: 4px;
+    left: -2px;
     width: 100px;
     height: 100px;
   }
@@ -246,14 +248,5 @@
     z-index: 1;
     width: 134px;
     height: 56px;
-  }
-
-  .program-weight__title--muscular::after {
-    .program-weight__title-general();
-    background-color: @green;
-    border-radius: 50%;
-    left: 0;
-    width: 100px;
-    height: 100px;
   }
 }

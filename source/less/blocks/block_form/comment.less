@@ -1,5 +1,6 @@
 .comment__title {
   .main-fonts();
+  padding: 0;
   font-size: 24px;
   line-height: 26px;
   color: @black;
@@ -21,9 +22,9 @@
   color: @black-max_light;
   outline: 1px solid #e7e7e7;
   border: none;
-  padding: 8px 9px 11px 16px;
+  padding: 8px 8px 14px 14px;
   margin: 2px;
-  width: 98%;
+  width: 99.7%;
 }
 
 .comment__field:hover {
@@ -33,12 +34,6 @@
 .comment__field:focus {
   outline: 2px solid @black-max_light;
 }
-
-/*поведение элемента поля при ошибке
-.form-page__main-data__field:invalid {
-  border: 2px solid @error_status;
-}
-*/
 
 @media (min-width: @width-tablet) {
   .comment__title {
@@ -50,5 +45,6 @@
     .font-size-form-page_tablet();
     resize: vertical;
     max-height: 173px;
+    padding-left: 18px;
   }
 }

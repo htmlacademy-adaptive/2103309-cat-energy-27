@@ -25,7 +25,7 @@
   .margin-padding_off();
 
   &--more {
-    margin-bottom: 14px;
+    margin-bottom: 12px;
     font-size: 12px;
     line-height: 16px;
   }
@@ -36,8 +36,8 @@
   grid-template-columns: 2fr 75px 65px;
   grid-template-rows: 1fr 1fr;
   align-items: center;
-  row-gap: 8px;
-  margin: 5px 0 22px;
+  row-gap: 9px;
+  margin: 6px 0 20px;
   justify-items: center;
 
   &--more {
@@ -181,6 +181,10 @@
     border-top: none;
   }
 
+  .catalog__card-title span {
+    padding-left: 5px;
+  }
+
   .catalog__card-title--icon {
     padding-top: 0;
   }
@@ -207,13 +211,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 164px;
+    padding-top: 162px;
     position: relative;
     margin: 0;
   }
 
   .catalog__card:not(:last-child) {
-    margin-bottom: 26px;
+    margin-bottom: 27px;
   }
 
   .catalog__card-list {
@@ -263,34 +267,64 @@
 
 @media (min-width: @width-desktop) {
   .header-catalog {
-    margin-bottom: 50px;
+    margin-bottom: 53px;
+  }
+
+  .catalog__title {
+    margin-bottom: 166px;
+  }
+
+  .catalog__item {
+    padding-left: 41px;
+    padding-right: 39px;
   }
 
   .catalog__item:nth-child(5) .catalog__card-picture,
   .catalog__item:nth-child(7) .catalog__card-picture {
-    top: -80px;
+    top: -72px;
   }
 
   .catalog__item:nth-child(2n) .catalog__card-picture {
-    top: -82px;
+    top: -74px;
   }
 
   .catalog__wrapper {
     .global-padding_desktop();
-    margin-bottom: 72px;
+    margin-bottom: 78px;
   }
 
   .catalog__list {
     grid-template-columns: repeat(4, 1fr);
-    gap: 144px 80px;
+    gap: 146px 80px;
   }
 
   .catalog__card-title {
     text-align: center;
+    margin-bottom: 15px;
+    padding-left: 6px;
+  }
+
+  .catalog__card-title span {
+    margin-top: -4px;
+    display: block;
   }
 
   .catalog__card-picture {
     margin: 0 auto;
-    top: -51px;
+    top: -52px;
+  }
+
+  .catalog__card-description--more {
+    margin-bottom: 79px;
+  }
+
+  .catalog__card--more {
+    padding-top: 159px;
+  }
+
+  .catalog__card--more .catalog__card-title {
+    padding-left: 0;
+    margin-bottom: 10px;
   }
 }
+

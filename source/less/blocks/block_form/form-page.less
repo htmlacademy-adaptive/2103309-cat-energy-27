@@ -3,7 +3,7 @@
 }
 
 .form-page__title {
-  padding-top: 27px;
+  padding-top: 26px;
 }
 
 .form-page__description {
@@ -18,11 +18,10 @@
   outline: 2px solid @black-max_light;
 }
 
-/*поведение элемента поля при ошибке
-.form-page__main-data__field:invalid {
+
+.form-page__main-data__field:not(:placeholder-shown):invalid {
   outline: 2px solid @error_status;
 }
-*/
 
 @media (min-width: @width-tablet) {
   .form-page {
@@ -36,6 +35,7 @@
   .form-page__title {
     .fonts-size-title_width-tablet();
     margin-bottom: 54px;
+    letter-spacing: -0.1px;
   }
 
   .form-page__description {

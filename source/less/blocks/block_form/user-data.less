@@ -1,7 +1,7 @@
 .form-page__user-data__wrapper {
   .global-padding_mobile();
   padding-top: 26px;
-  margin-bottom: 22px;
+  margin-bottom: 23px;
 }
 
 .user-data__label {
@@ -23,18 +23,12 @@
   outline: 2px solid @black-max_light;
 }
 
-/*поведение элемента поля при ошибке
-.user-data__field:invalid {
-  outline: 2px solid @error_status;
-}
-*/
-
 .user-data__list {
   .margin-padding_off();
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 15px;
   flex-wrap: wrap;
 }
 
@@ -60,21 +54,25 @@
   stroke: @green;
 }
 
-/* поведение элемента  иконка при ошибке
-.user-data__field:invalid + .user-data__field__email-icon,
-.user-data__field:invalid + .user-data__field__tel-icon {
+[type="tel"]:not(:placeholder-shown):invalid,
+[type="email"]:not(:placeholder-shown):invalid {
+  outline: 2px solid @error_status;
+}
+
+.user-data__field:not(:placeholder-shown):invalid + .user-data__field__tel-icon,
+.user-data__field:not(:placeholder-shown):invalid + .user-data__field__email-icon {
   stroke: @error_status;
 }
-*/
 
 .user-data {
   .margin-padding_off();
   border: none;
-  margin-bottom: 23px;
+  margin-bottom: 25px;
 }
 
 .user-data__title {
   .main-fonts();
+  padding: 0;
   font-size: 24px;
   line-height: 26px;
   color: @black;
@@ -85,23 +83,23 @@
 @media (min-width: @width-tablet) {
   .form-page__user-data__wrapper {
     padding: 0;
-    margin-bottom: 60px;
+    margin-bottom: 62px;
   }
 
   .user-data {
-    margin-bottom: 65px;
+    margin-bottom: 66px;
   }
 
   .user-data__list {
-    gap: 20px;
+    gap: 22px;
   }
 
   .user-data__item {
-    column-gap: 18px;
+    column-gap: 21px;
   }
 
   .user-data__title {
-    margin-bottom: 78px;
+    margin-bottom: 75px;
     .fonts-size-form__subtitle();
   }
 
@@ -119,19 +117,21 @@
 @media (min-width: @width-desktop) {
   .user-data__list {
     flex-direction: row;
-    column-gap: 78px;
+    column-gap: 81px;
+  }
+
+  .user-data {
+    margin-bottom: 68px;
+  }
+
+  .form-page__user-data__wrapper {
+    margin-bottom: 65px;
   }
 
   .user-data__item {
-    column-gap: 20px;
-  }
-
-  .user-data__item:first-child {
+    column-gap: 22px;
     flex-grow: 1;
-  }
-
-  .user-data__item:nth-child(2) {
-    max-width: 572px;
+    max-width: 568px;
     width: 100%;
   }
 }
