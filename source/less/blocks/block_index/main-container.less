@@ -7,10 +7,10 @@
   flex-direction: column;
 
   &--visible_background {
-    background-image: linear-gradient(to top, #ffffff 0%, transparent 0%), linear-gradient(to top, #ffffff 30%, #68b738d9 30%), url("../img/background_green_cat/background_cat@1x.jpg");
+    background-image: linear-gradient(to top, #ffffff 0%, transparent 0%), linear-gradient(to top, #ffffff 31%, #68b738d9 31%), url("../img/background_green_cat/background_cat@1x.jpg");
     background-repeat: no-repeat;
-    background-position: 60% -46px;
-    background-size: cover;
+    background-position: 63% -41px;
+    background-size: 180%;
     position: relative;
     padding: 27px 20px 0;
     align-items: center;
@@ -121,19 +121,20 @@
 
   .main-intro__picture {
     position: relative;
-    top: -105px;
+    top: -104px;
     order: 1;
   }
 
   .main-intro__title {
     .fonts-size-title_width-tablet();
-    margin-bottom: 40px;
+    margin-bottom: 39px;
   }
 
   .main-intro__description {
     font-size: 20px;
     line-height: 20px;
-    margin-bottom: 49px;
+    margin-bottom: 51px;
+    padding-left: 90px;
   }
 
   .button {
@@ -144,7 +145,7 @@
 @media (min-width: @width-desktop) {
   .main-intro {
     display: grid;
-    grid-template-columns: 445px 560px;
+    grid-template-columns: 450px 550px;
     grid-template-rows: repeat(3, auto);
     padding-left: 110px;
     padding-right: 110px;
@@ -153,10 +154,10 @@
   .main-intro--visible_background {
     background-image: linear-gradient(to right, #ffffff 50%, transparent 50%), linear-gradient(to right, #ffffff 50%, @green-transparency 50%), url("../img/background_green_cat/background_cat@1x.jpg");
     padding-top: 140px;
-    padding-bottom: 48px;
+    padding-bottom: 57px;
     background-position: 181% 0%;
     background-size: contain;
-    margin-bottom: 3px;
+    margin-bottom: -1px;
 
     @media (min-resolution: 2dppx) {
       background-image: linear-gradient(to right, #ffffff 50%, transparent 50%), linear-gradient(to right, #ffffff 50%, @green-transparency 50%), url("../img/background_green_cat/background_cat@2x.jpg");
@@ -175,7 +176,7 @@
   .main-intro__description {
     grid-column: 1 / 2;
     padding-left: 80px;
-    margin-bottom: 50px;
+    margin-bottom: 51px;
   }
 
   .main-intro__picture {

@@ -15,7 +15,7 @@
 }
 
 .navigation__item {
-  padding: 22px 0;
+  padding: 22px 5px;
   position: relative;
   border-bottom: 1px solid @catalog_popover_line;
 }
@@ -43,6 +43,7 @@
   background-color: transparent;
   position: relative;
   padding: 0;
+  padding-top: 5px;
 }
 
 .hide {
@@ -71,17 +72,21 @@
     position: static;
     display: flex;
     justify-content: flex-end;
-    letter-spacing: 0.25px;
   }
 
   .navigation__list {
     display: flex;
-    gap: 30px;
+    gap: 37px;
+
+    &--form {
+      gap: 34px;
+    }
   }
 
   .navigation__item {
     border-bottom: none;
     position: relative;
+    padding: 26px 0 19px;
   }
 
   .navigation__item:hover {
@@ -98,7 +103,7 @@
     height: 2px;
     background-color: @green;
     position: absolute;
-    bottom: 13px;
+    bottom: 11px;
     left: 0;
   }
 
@@ -114,11 +119,20 @@
 @media (min-width: @width-desktop) {
   .navigation__list {
     letter-spacing: 1px;
-    gap: 37px;
+    gap: 36px;
+  }
+
+  .navigation__item--current::after {
+    position: absolute;
+    bottom: 9px;
   }
 
   .navigation__item--index .navigation__item--current::after {
     background-color: @white;
+  }
+
+  .navigation__item {
+    padding-top: 24px;
   }
 
   .navigation__item a {

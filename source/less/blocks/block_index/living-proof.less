@@ -5,20 +5,20 @@
 
 .living-proof__description {
   .margin-padding_off();
-  margin-bottom: 17px;
+  margin-bottom: 20px;
   font-size: 14px;
 }
 
 .living-proof__title {
   margin: 0;
-  margin-bottom: 43px;
+  margin-bottom: 42px;
 }
 
 .living-proof__list {
   .margin-padding_off();
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
   gap: 32px;
 }
 
@@ -28,7 +28,7 @@
   line-height: 24px;
   text-align: center;
   color: @black;
-  padding: 15px 20px 17px;
+  padding: 15px 20px 18px;
   border: 2px solid @living-proof-border;
   border-radius: 3px;
   text-transform: uppercase;
@@ -58,7 +58,7 @@
   text-align: center;
   color: @black;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: -23px;
 }
 
 @media (min-width: @width-tablet) {
@@ -68,11 +68,10 @@
 
   .living-proof__info-wrapper {
     display: flex;
-    align-items: center;
   }
 
   .living-proof__list {
-    gap: 38px;
+    gap: 41px;
     margin: 0;
   }
 
@@ -86,17 +85,18 @@
   }
 
   .living-proof__title {
-    margin-bottom: 63px;
+    margin-bottom: 61px;
   }
 
   .living-proof__number {
     font-size: 30px;
     line-height: 37px;
-    padding-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 22px;
   }
 
   .living-proof__item--border {
-    width: 165px;
+    width: 163px;
   }
 
   .living-proof__number-description {
@@ -107,7 +107,7 @@
   }
 
   .living-proof__description {
-    margin-bottom: 54px;
+    margin-bottom: 53px;
     font-size: 16px;
     line-height: 24px;
   }
@@ -115,9 +115,11 @@
   .living-proof__cost {
     .fonts-size-living-proof__cost();
     line-height: 30px;
-    width: 174px;
+    width: 175px;
     text-align: end;
     margin-left: auto;
+    margin-top: 7px;
+    letter-spacing: 0.16px;
   }
 }
 
@@ -126,7 +128,7 @@
     .global-padding_desktop();
     display: flex;
     justify-content: space-between;
-    background: linear-gradient(to bottom, transparent 13%, #eaeaea 13%), linear-gradient(to bottom, #ffffff 13%, #eaeaea 13%);
+    background: linear-gradient(to bottom, transparent 23%, #eaeaea 23%), linear-gradient(to bottom, #ffffff 23%, #eaeaea 23%);
   }
 
   .living-proof__wrapper {
@@ -136,7 +138,7 @@
 
   .living-proof__wrapper .living-proof__title {
     .fonts-size-title_width-tablet();
-    margin-bottom: 63px;
+    margin-bottom: 68px;
   }
 
   .living-proof__title {
@@ -146,14 +148,14 @@
   .living-proof__description {
     font-size: inherit;
     line-height: 24px;
-    max-width: 436px;
-    padding-top: 81px;
+    max-width: 434px;
+    padding-top: 78px;
     margin-bottom: 68px;
   }
 
   .living-proof__info-wrapper {
     flex-direction: column;
-    row-gap: 36px;
+    row-gap: 30px;
     align-items: flex-start;
   }
 
@@ -163,7 +165,7 @@
 
   .living-proof__cost {
     display: flex;
-    max-width: 327px;
+    max-width: 328px;
     width: 100%;
     text-align: start;
     margin-left: 0;
@@ -172,9 +174,5 @@
 
   .living-proof__number-description {
     background-color: @living-proof-bg;
-  }
-
-  .living-proof__number {
-    padding-bottom: 24px;
   }
 }

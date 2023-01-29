@@ -52,7 +52,7 @@
   </svg>
 <!-- header -->
 <header class="main-header header-catalog">
-  <div class="main-header__wrapper"> <!--main-header__wrapper--nojs-->
+  <div class="main-header__wrapper main-header__wrapper--nojs">
     <div class="main-header__logo">
       <svg  class="main-header__logo__mobile" width="34" height="38">
         <use href="#logo-mobile"></use>
@@ -66,7 +66,7 @@
         <use href="#logo-desktop"></use>
       </svg>
 
-      <svg class="main-header__logo__text" width="100" height="24">
+      <svg class="main-header__logo__text" width="101" height="24">
         <use href="#logo-text"></use>
       </svg>
     </div>
@@ -88,7 +88,7 @@
       <div class="navigation__wrapper">
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a href="#" target="_blank">
+            <a href="index.html" target="_blank">
               Главная
             </a>
           </li>
@@ -117,7 +117,7 @@
             <div class="catalog__card">
               <a href="description/" class="catalog__card-picture">
                 <picture>
-                  <source media="(min-width: 1440px)" type="image/webp" srcset="img/catalog/desktop/chicken500desktop@1x.webp 1x, img/catalog/tablet/chicken500desktop@2x.webp 2x">
+                  <source media="(min-width: 1440px)" type="image/webp" srcset="img/catalog/desktop/chicken500desktop@1x.webp 1x, img/catalog/desktop/chicken500desktop@2x.webp 2x">
                   <source media="(min-width: 1440px)" srcset="img/catalog/desktop/chicken500desktop@1x.png 1x, img/catalog/desktop/chicken500desktop@2x.png 2x">
                   <source media="(min-width: 768px)" type="image/webp" srcset="img/catalog/tablet/chicken500tablet@1x.webp 1x, img/catalog/tablet/chicken500tablet@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/catalog/tablet/chicken500tablet@1x.png 1x, img/catalog/tablet/chicken500tablet@2x.png 2x">
@@ -126,7 +126,7 @@
                 </picture>
               </a>
               <h3 class="catalog__card-title">
-                <a href="description/">Cat Energy PRO 500 г</a>
+                <a href="description/">Cat Energy PRO <span>500 г</span></a>
               </h3>
               <dl class="catalog__card-list">
             <div class="catalog__card-item">
@@ -158,7 +158,7 @@
                 </picture>
               </a>
               <h3 class="catalog__card-title">
-                <a href="description/">Cat Energy PRO 1000 г</a>
+                <a href="description/">Cat Energy PRO <span>1000 г</span></a>
               </h3>
               <dl class="catalog__card-list">
             <div class="catalog__card-item">
@@ -190,7 +190,7 @@
                 </picture>
               </a>
               <h3 class="catalog__card-title">
-                <a href="description/">Cat Energy PRO 500 г</a>
+                <a href="description/">Cat Energy PRO <span>500 г</span></a>
               </h3>
               <dl class="catalog__card-list">
             <div class="catalog__card-item">
@@ -222,7 +222,7 @@
                 </picture>
               </a>
               <h3 class="catalog__card-title">
-                <a href="description/">Cat Energy PRO 1000 г</a>
+                <a href="description/">Cat Energy PRO <span>1000 г</span></a>
               </h3>
               <dl class="catalog__card-list">
             <div class="catalog__card-item">
@@ -254,7 +254,7 @@
                 </picture>
               </a>
               <h3 class="catalog__card-title">
-                <a href="description/">Cat Energy SLIm 500 г</a>
+                <a href="description/">Cat Energy SLIm <span>500 г</span></a>
               </h3>
               <dl class="catalog__card-list">
             <div class="catalog__card-item">
@@ -286,7 +286,7 @@
                 </picture>
               </a>
               <h3 class="catalog__card-title">
-                <a href="description/">Cat Energy SLIM 1000 г</a>
+                <a href="description/">Cat Energy SLIM <span>1000 г</span></a>
               </h3>
               <dl class="catalog__card-list">
             <div class="catalog__card-item">
@@ -318,7 +318,7 @@
                 </picture>
               </a>
               <h3 class="catalog__card-title">
-                <a href="description/">Cat Energy SLIM 500 г</a>
+                <a href="description/">Cat Energy SLIM <span>500 г</span></a>
               </h3>
               <dl class="catalog__card-list">
             <div class="catalog__card-item">
@@ -390,7 +390,7 @@
     </section>
 <!-- gift -->
     <div class="gift--back-picture gift ">
-      <p class="gift__description--icon gift__description">Закажите все<br>и получите чехол&nbsp; для кота в подарок!</p>
+      <p class="gift__description--icon gift__description">Закажите все<br>и получите чехол&nbsp;для кота в подарок!</p>
     </div>
   </div>
   </main>
@@ -401,11 +401,27 @@
       <h2 class="visually-hidden">Где нас найти.</h2>
       <div class="address__wrapper">
         <p class="address__title">приглашаем<br>к сотрудничеству дилеров!</p>
-        <address class="address__description">ул. Большая<br>Конюшенная, д. 19/8 Санкт-Петербург
+        <address class="address__description">ул. Большая<br>Конюшенная, д. 19/8
+          <p>Санкт-Петербург</p>
         </address>
       </div>
-      <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8226084133137!2d30.315220215990376!3d59.96826598188698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sth!4v1674371622171!5m2!1sru!2sth" width="600" height="450" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="map map--nojs">
+        <picture>
+          <source media="(min-width: 1440px)" type="image/webp" srcset="img/map_picture/location-desktop.webp 1x, img/map_picture/location-desktop@2x.webp 2x">
+
+          <source media="(min-width: 1440px)" srcset="img/map_picture/location-desktop.png 1x, img/map_picture/location-desktop.png@2x.png 2x">
+
+          <source media="(min-width: 768px)" type="image/webp" srcset="img/map_picture/location-tablet.webp 1x, img/map_picture/location-tablet@2x.webp 2x">
+
+          <source media="(min-width: 768px)" srcset="img/map_picture/location-tablet.png 1x, img/map_picture/location-tablet@2x.png 2x">
+
+          <source type="image/webp" srcset="img/map_picture/location-mobile.webp 1x, img/map_picture/location-mobile@2x.webp 2x">
+
+          <img class="map-image" src="img/map_picture/location-mobile.png" srcset="img/map_picture/location-mobile@2x.png 2x" width="320" height="362" alt="Наше местоположение">
+        </picture>
+        <iframe class="map-address"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1996.822607321338!2d30.3174089!3d59.968266!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sth!4v1674820836305!5m2!1sru!2sth" width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
       </div>
     </section>
     <div class="main-footer__wrapper">
@@ -416,8 +432,8 @@
         </svg>
       </div>
       <div class="main-footer__sotial-media">
-        <ul class="main-footer__sotial-media__list">
-          <li class="main-footer__sotial-media__ltem">
+        <ul class="main-footer__sotial-media__list main-footer__catalog">
+          <li class="main-footer__sotial-media__item">
             <a class="main-footer__sotial-media__link" href="#">
             <span class="visually-hidden">Vkontakte.</span>
             <svg  class="main-footer__sotial-media__icon" width="27" height="17">
@@ -425,16 +441,16 @@
             </svg>
             </a>
           </li>
-          <li>
-            <a href="#">
+          <li class="main-footer__sotial-media__item">
+            <a class="main-footer__sotial-media__link" href="#">
             <span class="visually-hidden">Youtube.</span>
             <svg class="main-footer__sotial-media__icon" width="24" height="19">
               <use href="#youtube_logo"></use>
             </svg>
             </a>
           </li>
-          <li>
-            <a href="#">
+          <li class="main-footer__sotial-media__item">
+            <a class="main-footer__sotial-media__link" href="#">
             <span class="visually-hidden">Telegram.</span>
             <svg class="main-footer__sotial-media__icon" width="20" height="18">
               <use href="#telegram_icon"></use>
@@ -456,5 +472,6 @@
     </div>
   </footer>
   <script src="./js/script.js"></script>
+  <script src="./js/map.js"></script>
 </body>
 </html>

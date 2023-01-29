@@ -8,7 +8,7 @@
 .main-footer__logo-footer {
   display: flex;
   justify-content: center;
-  padding-top: 39px;
+  padding-top: 38px;
   padding-bottom: 31px;
   border-bottom: 1px solid @footer_decor_line;
 }
@@ -30,18 +30,21 @@
 }
 
 .main-footer__sotial-media {
-  padding-top: 23px;
+  padding-top: 24px;
   padding-bottom: 18px;
   border-bottom: 1px solid @footer_decor_line;
 }
 
 .main-footer__sotial-media__list {
   .margin-padding_off();
+  margin: 0 auto;
   list-style-type: none;
   display: flex;
-  gap: 26px;
-  justify-content: center;
+  gap: 29px;
+  justify-content: flex-start;
   align-items: center;
+  width: 129px;
+  flex-wrap: wrap;
 }
 
 .main-footer__htmlacademy__title {
@@ -52,16 +55,17 @@
 }
 
 .main-footer__htmlacademy {
-  padding-top: 21px;
-  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 23px;
+  gap: 25px;
 }
 
 .main-footer__htmlacademy-link {
   text-decoration: none;
+  max-height: 34px;
 }
 
 .main-footer__sotial-media__icon,
@@ -80,10 +84,14 @@
   opacity: 0.3;
 }
 
+.main-footer__catalog {
+  width: 136px;
+}
+
 /*  @MEDIA  */
 @media (min-width: @width-tablet) {
   .main-footer__wrapper {
-    padding: 22px 30px 31px;
+    padding: 31px 30px 31px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -92,6 +100,19 @@
   .main-footer__sotial-media,
   .main-footer__logo-footer {
     border-bottom: none;
+  }
+
+  .main-footer__sotial-media {
+    margin-left: 20px;
+  }
+
+  .main-footer__sotial-media__list {
+    gap: 28px;
+    width: 127px;
+  }
+
+  .main-footer__htmlacademy {
+    padding-top: 23px;
   }
 }
 
@@ -102,11 +123,20 @@
 
   .main-footer__sotial-media,
   .main-footer__logo-footer {
-    padding-bottom: 76px;
-    padding-top: 56px;
+    padding-bottom: 87px;
+    padding-top: 63px;
+  }
+
+  .main-footer__sotial-media {
+    margin-left: 27px;
   }
 
   .main-footer__htmlacademy {
-    padding-bottom: 36px;
+    padding-bottom: 43px;
+    padding-top: 20px;
+  }
+
+  .main-footer__sotial-media__list {
+    width: 129px;
   }
 }

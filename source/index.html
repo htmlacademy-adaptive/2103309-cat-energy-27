@@ -31,8 +31,8 @@
     </symbol>
 
     <symbol id="programm_arrow" viewBox="0 0 32 12" fill="none">
-      <path stroke="#000" stroke-width="2" d="M0 6h18"/>
-      <path fill="#000" d="m24 6-6.75 5.2V.8L24 6Z"/>
+      <path class="programm-arrow1" stroke="#000" stroke-width="2" d="M0 6h18"/>
+      <path  class="programm-arrow2" fill="#000" d="m24 6-6.75 5.2V.8L24 6Z"/>
     </symbol>
 
     <symbol id="slider_arrows" viewBox="0 0 24 18" fill="none">
@@ -62,10 +62,10 @@
           <use href="#logo-tablet"></use>
         </svg>
 
-        <svg class="main-header__logo__desktop" width="202" height="59">
+        <svg class="main-header__logo__desktop" width="200" height="59">
           <use href="#logo-desktop"></use>
         </svg>
-        <svg class="main-header__logo__text" width="100" height="24">
+        <svg class="main-header__logo__text" width="101" height="24">
           <use href="#logo-text"></use>
         </svg>
       </div>
@@ -174,7 +174,7 @@
             <p class="advantages__item-description">Замените один-два приема обычной еды на наше функциональное питание.</p>
           </li>
           <li class="advantages__item advantages__item--time advantages__item--time--back_element">
-            <p class="advantages__item-description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+            <p class="advantages__item-description">Уже через месяц наслаждайтесь изменениями к лучшему&nbsp;<br>вашего питомца!</p>
           </li>
         </ul>
       </div>
@@ -199,24 +199,22 @@
         </div>
       </div>
         <div class="slider">
-          <div class="slider__image slider__image-before">
+          <h2 class="visually-hidden">Слайдер с толстым и тонким котом</h2>
+          <div class="slider__image">
             <picture>
-              <source media="(min-width: 1440px)" srcset="img/cat_slider/before_desktop@1x.png 1x, img/cat_slider/before_desktop@2x.png 2x">
+              <source media="(min-width: 1440px)" type="image/webp" srcset="img/cat_slider/cat-slider-desktop.webp 1x, img/cat_slider/cat-slider-desktop@2x.webp 2x">
 
-              <source media="(min-width: 768px)" srcset="img/cat_slider/before_tablet@1x.png 1x, img/cat_slider/before_tablet@2x.png 2x">
+              <source media="(min-width: 1440px)" srcset="img/cat_slider/cat-slider-desktop.png 1x, img/cat_slider/cat-slider-desktop@2x.png 2x">
 
-              <img src="img/cat_slider/before_mobile@1x.png" srcset="img/cat_slider/before_mobile@2x.png 2x" width="280" height="256" alt="Толстый кот.">
+              <source media="(min-width: 768px)" type="image/webp" srcset="img/cat_slider/cat-slider-tablet.webp 1x, img/cat_slider/cat-slider-tablet@2x.webp 2x">
+
+              <source media="(min-width: 768px)" srcset="img/cat_slider/cat-slider-tablet.png 1x, img/cat_slider/cat-slider-tablet@2x.png 2x">
+
+              <source type="image/webp" srcset="img/cat_slider/cat-slider-mobile.webp 1x, img/cat_slider/cat-slider-mobile@2x.webp 2x">
+
+              <img src="img/cat_slider/cat-slider-mobile.png" srcset="img/cat_slider/cat-slider-mobile@2x.png 2x" width="280" height="256" alt="Слайдер с толсто-худым котом.">
             </picture>
           </div>
-          <div class="slider__image slider__image-after">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="img/cat_slider/after_desktop@1x.png 1x, img/cat_slider/after_desktop@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/cat_slider/after_tablet@1x.png 1x, img/cat_slider/after_tablet@2x.png 2x">
-              <img src="img/cat_slider/after_mobile@1x.png" srcset="img/cat_slider/after_mobile@2x.png 2x" width="280" height="256" alt="Худой кот.">
-            </picture>
-          </div>
-          <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown" class="range">
-        <div class="button-line" aria-hidden="true"></div>
         </div>
     </section>
   </main>
@@ -230,8 +228,23 @@
         <address class="address__description">ул. Большая<br>Конюшенная, д. 19/8 <p>Санкт-Петербург</p>
         </address>
       </div>
-      <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8226084133137!2d30.315220215990376!3d59.96826598188698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sth!4v1674371622171!5m2!1sru!2sth" width="600" height="450" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="map map--nojs">
+        <picture>
+          <source media="(min-width: 1440px)" type="image/webp" srcset="img/map_picture/location-desktop.webp 1x, img/map_picture/location-desktop@2x.webp 2x">
+
+          <source media="(min-width: 1440px)" srcset="img/map_picture/location-desktop.png 1x, img/map_picture/location-desktop.png@2x.png 2x">
+
+          <source media="(min-width: 768px)" type="image/webp" srcset="img/map_picture/location-tablet.webp 1x, img/map_picture/location-tablet@2x.webp 2x">
+
+          <source media="(min-width: 768px)" srcset="img/map_picture/location-tablet.png 1x, img/map_picture/location-tablet@2x.png 2x">
+
+          <source type="image/webp" srcset="img/map_picture/location-mobile.webp 1x, img/map_picture/location-mobile@2x.webp 2x">
+
+          <img class="map-image" src="img/map_picture/location-mobile.png" srcset="img/map_picture/location-mobile@2x.png 2x" width="320" height="362" alt="Наше местоположение">
+        </picture>
+        <iframe class="map-address"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1996.822607321338!2d30.3174089!3d59.968266!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sth!4v1674820836305!5m2!1sru!2sth" width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
       </div>
     </section>
     <div class="main-footer__wrapper">
@@ -251,16 +264,16 @@
             </svg>
             </a>
           </li>
-          <li>
-            <a href="#">
+          <li class="main-footer__sotial-media__ltem">
+            <a class="main-footer__sotial-media__link" href="#">
             <span class="visually-hidden">Youtube.</span>
             <svg class="main-footer__sotial-media__icon" width="24" height="19">
               <use href="#youtube_logo"></use>
             </svg>
             </a>
           </li>
-          <li>
-            <a href="#">
+          <li class="main-footer__sotial-media__ltem">
+            <a class="main-footer__sotial-media__link" href="#">
             <span class="visually-hidden">Telegram.</span>
             <svg class="main-footer__sotial-media__icon" width="20" height="18">
               <use href="#telegram_icon"></use>
@@ -282,5 +295,6 @@
     </div>
   </footer>
   <script src="./js/script.js"></script>
+  <script src="./js/map.js"></script>
 </body>
 </html>
